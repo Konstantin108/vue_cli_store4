@@ -1,20 +1,406 @@
 <template>
-  <div id="app">
-    <v-main-wrapper></v-main-wrapper>
-  </div>
+    <div class="v-main-wrapper">
+      <div class="top">
+        <header class="header center">
+          <div class="header__left">
+
+
+
+
+
+            <a class="logo" href="index.html"><img src="./../assets/img/logo.png" alt="logo" class="logo__img"><span
+                class="bran_weight">BRAN</span><span class="special__color_logo">D</span></a>
+            <form class="header__form" action="#">
+              <details class="browse details_browse">
+                <summary class="summary_browse">Browse</summary>
+                <div class="drop_details drop__browse">
+                  <div class="drop__flex">
+                    <h3 class="drop__h3">Women</h3>
+                    <ul class="drop__il">
+                      <li class="drop__list"><a href="Product.html" class="drop__link">Dresses</a></li>
+                      <li class="drop__list"><a href="Product.html" class="drop__link">Tops</a></li>
+                      <li class="drop__list"><a href="Product.html" class="drop__link">Sweaters/Knits</a>
+                      </li>
+                      <li class="drop__list"><a href="Product.html" class="drop__link">Jackets/Coats</a>
+                      </li>
+                      <li class="drop__list"><a href="Product.html" class="drop__link">Blazers</a></li>
+                      <li class="drop__list"><a href="Product.html" class="drop__link">Denim</a></li>
+                      <li class="drop__list"><a href="Product.html" class="drop__link">Leggings/Pants</a>
+                      </li>
+                      <li class="drop__list"><a href="Product.html" class="drop__link">Skirts/Shorts</a>
+                      </li>
+                      <li class="drop__list"><a href="Product.html" class="drop__link">Accessories</a>
+                      </li>
+                    </ul>
+                    <h3 class="drop__h3">Men</h3>
+                    <ul class="drop__il">
+                      <li class="drop__list"><a href="Product.html" class="drop__link">Tees/Tank tops</a>
+                      </li>
+                      <li class="drop__list"><a href="Product.html" class="drop__link">Shirts/Polos</a>
+                      </li>
+                      <li class="drop__list"><a href="Product.html" class="drop__link">Sweaters</a></li>
+                      <li class="drop__list"><a href="Product.html"
+                                                class="drop__link">Sweatshirts/Hoodies</a>
+                      </li>
+                      <li class="drop__list"><a href="Product.html" class="drop__link">Blazers</a></li>
+                      <li class="drop__list"><a href="Product.html" class="drop__link">Jackets/vests</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </details>
+              <input type="text" class="text_search" placeholder="Search for item...">
+              <button class="search_button"><img src="./../assets/img/search_image.png" alt="search_image"></button>
+            </form>
+          </div>
+          <div class="header__right">
+
+            <ul>
+              <li class="cart_summary"><a href="shopping_cart.html"><img class="header__cart" src="./../assets/img/cart.svg"
+                                                                         alt="cart"></a>
+                <div class="drop__cart">
+                  <div class="drop__flex">
+                    <ul class="drop__il">
+                      <li class="drop__list drop__list_cart">
+                        <div class="cart__content">
+                          <a href="single_page.html" class="drop__link cart__product">
+                            <div class="cart__image__content content__1"></div>
+                            <div class="cart__text_content">
+                              <p class="cart__text_1">Rebox Zane</p> <img src="./../assets/img/stars.png"
+                                                                          alt="stars"
+                                                                          class="stars">
+                              <p class="cart__price_2">1 x $250</p>
+                            </div>
+                          </a> <a href="#" class="delete_cart_item"><i
+                            class="fas fa-times-circle"></i></a>
+                        </div>
+                      </li>
+                      <li class="drop__list drop__list_cart">
+                        <div class="cart__content">
+                          <a href="single_page.html" class="drop__link cart__product">
+                            <div class="cart__image__content content__2"></div>
+                            <div class="cart__text_content">
+                              <p class="cart__text_1">Rebox Zane</p> <img src="./../assets/img/stars.png"
+                                                                          alt="stars"
+                                                                          class="stars">
+                              <p class="cart__price_2">1 x $250</p>
+                            </div>
+                          </a> <a href="#" class="delete_cart_item"><i
+                            class="fas fa-times-circle"></i></a>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="total">
+                      <p class="text__total">total</p>
+                      <p class="summ">$500.00</p>
+                    </div>
+                    <a href="checkout.html" class="cart__button_sub">Checkout</a>
+                    <a href="shopping_cart.html" class="cart__button_sub last__button">Go to cart</a>
+
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <a href="#" class="button">My accaunt<img src="./../assets/img/white_arrow.png" alt="white_arrow"
+                                                      class="white_arrow"></a>
+          </div>
+        </header>
+        <nav class="nav center">
+          <ul class="menu">
+            <li class="menu__list"><a href="#" class="menu__link">Home</a>
+              <div class="drop">
+                <div class="drop__flex">
+                  <h3 class="drop__h3">Home</h3>
+                  <ul class="drop__il">
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Man</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Women</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Kids</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Accoseriese</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Featured</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Hot Deals</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="menu__list"><a href="Product.html" class="menu__link">Man</a>
+              <div class="drop">
+                <div class="drop__flex">
+                  <h3 class="drop__h3">Man</h3>
+                  <ul class="drop__il">
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Dresses</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Tops</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Sweaters/Knits</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Jackets/Coats</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Blazers</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Denim</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Leggings/Pants</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Skirts/Shorts</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Accessories</a></li>
+                  </ul>
+                </div>
+                <div class="drop__flex">
+                  <h3 class="drop__h3">Pants</h3>
+                  <ul class="drop__il">
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Dresses</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Tops</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Sweaters/Knits</a></li>
+                  </ul>
+                  <h3 class="drop__h3">T-shirts</h3>
+                  <ul class="drop__il">
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Dresses</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Tops</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Sweaters/Knits</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="menu__list"><a href="Product.html" class="menu__link">Women</a>
+              <div class="drop drop__women">
+                <div class="drop__flex">
+                  <h3 class="drop__h3">Women</h3>
+                  <ul class="drop__il">
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Dresses</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Tops</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Sweaters/Knits</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Jackets/Coats</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Blazers</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Denim</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Leggings/Pants</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Skirts/Shorts</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Accessories</a></li>
+                  </ul>
+                </div>
+                <div class="drop__flex">
+                  <h3 class="drop__h3">Pants</h3>
+                  <ul class="drop__il">
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Dresses</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Tops</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Sweaters/Knits</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Jackets/Coats</a></li>
+                  </ul>
+                  <h3 class="drop__h3">T-shirts</h3>
+                  <ul class="drop__il">
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Dresses</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Tops</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Sweaters/Knits</a></li>
+                  </ul>
+                </div>
+                <div class="drop__flex drop__fleximg">
+                  <h3 class="drop__h3">Swimwear</h3>
+                  <ul class="drop__il">
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Dresses</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Tops</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Sweaters/Knits</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Jackets/Coats</a></li>
+                  </ul>
+                  <a href="#" class="link__man_submenu">
+                    <p class="super_sale">super
+                      <br>sale!</p>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="menu__list"><a href="Product.html" class="menu__link">Kids</a>
+              <div class="drop">
+                <div class="drop__flex">
+                  <h3 class="drop__h3">Kids</h3>
+                  <ul class="drop__il">
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Dresses</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Tops</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Sweaters/Knits</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Jackets/Coats</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Blazers</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Denim</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Leggings/Pants</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Skirts/Shorts</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Accessories</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="menu__list"><a href="Product.html" class="menu__link">Accoseriese</a>
+              <div class="drop">
+                <div class="drop__flex">
+                  <h3 class="drop__h3">Accoseriese</h3>
+                  <ul class="drop__il">
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Dresses</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Tops</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Sweaters/Knits</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Jackets/Coats</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Blazers</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Denim</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Leggings/Pants</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Skirts/Shorts</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Accessories</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="menu__list"><a href="Product.html" class="menu__link">Featured</a>
+              <div class="drop">
+                <div class="drop__flex">
+                  <h3 class="drop__h3">Featured</h3>
+                  <ul class="drop__il">
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Dresses</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Tops</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Sweaters/Knits</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Jackets/Coats</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Blazers</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="menu__list"><a href="Product.html" class="menu__link">Hot Deals</a>
+              <div class="drop drop__last">
+                <div class="drop__flex">
+                  <h3 class="drop__h3">hot deals</h3>
+                  <ul class="drop__il">
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Dresses</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Tops</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Sweaters/Knits</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Jackets/Coats</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Blazers</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Denim</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Leggings/Pants</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Skirts/Shorts</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Accessories</a></li>
+                  </ul>
+                </div>
+                <div class="drop__flex">
+                  <h3 class="drop__h3">hot deals</h3>
+                  <ul class="drop__il">
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Dresses</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Tops</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Sweaters/Knits</a></li>
+                  </ul>
+                  <h3 class="drop__h3">hot deals</h3>
+                  <ul class="drop__il">
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Dresses</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Tops</a></li>
+                    <li class="drop__list"><a href="Product.html" class="drop__link">Sweaters/Knits</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </nav>
+
+        <v-catalog></v-catalog>
+
+      </div>
+
+      <footer class="footer">
+        <div class="beach_color">
+          <div class="block_beach">
+            <figure class="left__block_beach">
+              <div class="photo_block"><img src="./../assets/img/women_face.png" alt="women__face" class="women__face">
+              </div>
+              <div class="only__text_beach">
+                <p class="all__text">&laquo;Vestibulum quis porttitor dui! Quisque viverra nunc&nbsp;mi,
+                  a&nbsp;pulvinar purus condimentum&nbsp;a. Aliquam condimentum mattis neque sed
+                  pretium&raquo;</p>
+                <p class="name__text">Bin Burhan
+                  <br><span class="special__color_beach">Dhaka, Bd</span></p>
+                <div class="line__beach"></div>
+                <div class="line__beach"></div>
+                <div class="line__beach"></div>
+              </div>
+            </figure>
+            <div class="div right__block_beach">
+              <p class="right__block_beach">Subscribe
+                <br><span class="special__size">FOR OUR NEWLETTER AND PROMOTION</span></p>
+              <br>
+              <form action="#" class="subscribe__form">
+                <input type="email" class="beach__subscribe" placeholder="Enter Your Email">
+                <button
+                    class="beach_subscribe_button">Subscribe
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="contacts_info center">
+          <div class="big__block">
+            <a class="logo1" href="index.html"><img src="./../assets/img/logo.png" alt="logo" class="logo__img1"><span
+                class="bran_weight">BRAN</span><span class="special_color1">D</span></a>
+            <div class="info__text">Objectively transition extensive data rather than cross functional solutions.
+              Monotonectally syndicate multidisciplinary materials before go&nbsp;forward benefits. Intrinsicly
+              syndicate an&nbsp;expanded array of&nbsp;processes and cross-unit partnerships.
+              <br>
+              <br>Efficiently plagiarize 24/365 action items and focused infomediaries. Distinctively seize
+              superior initiatives for wireless technologies. Dynamically optimize.
+            </div>
+          </div>
+          <nav class="new_menu_block">
+            <ul class="new_menu">
+              <li class="new_menu_list first_menu_link"><a href="" class="new_menu_link first_item">COMPANY</a>
+              </li>
+              <li class="new_menu_list"><a href="#" class="new_menu_link">Home</a></li>
+              <li class="new_menu_list"><a href="#" class="new_menu_link">Shop</a></li>
+              <li class="new_menu_list"><a href="#" class="new_menu_link">About</a></li>
+              <li class="new_menu_list"><a href="#" class="new_menu_link">How It Works</a></li>
+              <li class="new_menu_list"><a href="#" class="new_menu_link">Contact</a></li>
+            </ul>
+          </nav>
+          <nav class="new_menu_block">
+            <ul class="new_menu">
+              <li class="new_menu_list first_menu_link"><a href=""
+                                                           class="new_menu_link first_item">INFORMATION</a></li>
+              <li class="new_menu_list"><a href="#" class="new_menu_link">Tearms & Condition</a></li>
+              <li class="new_menu_list"><a href="#" class="new_menu_link">Privacy Policy</a></li>
+              <li class="new_menu_list"><a href="#" class="new_menu_link">How to Buy</a></li>
+              <li class="new_menu_list"><a href="#" class="new_menu_link">How to Sell</a></li>
+              <li class="new_menu_list"><a href="#" class="new_menu_link">Promotion</a></li>
+            </ul>
+          </nav>
+          <nav class="new_menu_block">
+            <ul class="new_menu">
+              <li class="new_menu_list first_menu_link"><a href="" class="new_menu_link first_item">SHOP
+                CATEGORY</a></li>
+              <li class="new_menu_list"><a href="Product.html" class="new_menu_link">Men</a></li>
+              <li class="new_menu_list"><a href="single_page.html" class="new_menu_link">Women</a></li>
+              <li class="new_menu_list"><a href="#" class="new_menu_link">Child</a></li>
+              <li class="new_menu_list"><a href="#" class="new_menu_link">Apparel</a></li>
+              <li class="new_menu_list"><a href="#" class="new_menu_link">Brows All</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer_end center">
+          <div class="copy_end">&copy; 2017 Brand All Rights Reserved.</div>
+          <div class="social_links_end"><a href="#" class="link_end"><i class="fab fa-facebook-f link__icon"></i></a>
+            <a href="#" class="link_end"><i class="fab fa-twitter link__icon"></i></a> <a href="#"
+                                                                                          class="link_end"><i
+                class="fab fa-linkedin-in link__icon"></i></a> <a href="#" class="link_end"><i
+                class="fab fa-pinterest-p link__icon"></i></a> <a href="#" class="link_end"><i
+                class="fab fa-google-plus-g link__icon"></i></a></div>
+        </div>
+      </footer>
+    </div>
+
+
 </template>
 
 <script>
-import vMainWrapper from './components/v-main-wrapper'
+import vCatalog from './v-catalog'
+
 
 export default {
-  name: 'App',
-  components: {
-    vMainWrapper
+  name: "v-main-wrapper",
+  props:{},
+  components:{
+    vCatalog,
+  },
+  data(){
+    return{}
+  },
+  methods:{
+
+  },
+  computed:{},
+  mounted() {
   }
 }
-
-
 </script>
 
 <style lang="scss">
@@ -50,7 +436,7 @@ a {
   clear: both;
 }
 
-.wrapper {
+.v-main-wrapper {
   min-height: 100%;
   display: flex;
   flex-direction: column;
@@ -140,9 +526,9 @@ a {
   color: #222222;
   display: block;
 
-//margin-bottom: 20px;
+  //margin-bottom: 20px;
   margin-top: 16px;
-//border-bottom: 3px solid #ffffff;
+  //border-bottom: 3px solid #ffffff;
   transition: .4s;
 }
 
@@ -165,7 +551,7 @@ a {
 .promo {
   height: 613px;
   background-color: #e8e8e8;
-  background-image: url(./assets/img/promo.png);
+  background-image: url(./../assets/img/promo.png);
   background-repeat: no-repeat;
   background-position: center -51px;
   display: flex;
@@ -207,7 +593,7 @@ a {
 }
 
 .block__img1 {
-  background-image: url(./assets/img/img_men.jpg);
+  background-image: url(./../assets/img/img_men.jpg);
   width: 560px;
   height: 542px;
   margin-right: 20px;
@@ -218,7 +604,7 @@ a {
 .block__img2 {
   width: 560px;
   height: 261px;
-  background-image: url(./assets/img/img_women.jpg);
+  background-image: url(./../assets/img/img_women.jpg);
   margin-bottom: 20px;
   transition: .4s;
 }
@@ -226,13 +612,13 @@ a {
 .block__img3 {
   width: 560px;
   height: 261px;
-  background-image: url(./assets/img/img_accer.jpg);
+  background-image: url(./../assets/img/img_accer.jpg);
   margin-right: 20px;
   transition: .4s;
 }
 
 .block__img4 {
-  background-image: url(./assets/img/img_kid.jpg);
+  background-image: url(./../assets/img/img_kid.jpg);
   width: 560px;
   height: 542px;
   transition: .4s;
@@ -357,7 +743,7 @@ a {
 
 .summary_browse::after {
   content: "";
-  background-image: url(./assets/img/caret-down-solid.svg);
+  background-image: url(./../assets/img/caret-down-solid.svg);
   background-repeat: no-repeat;
   position: absolute;
   height: 16px;
@@ -369,7 +755,7 @@ a {
 
 .details_browse[open] > .summary_browse::after {
   content: "";
-  background-image: url(./assets/img/caret-right-solid.svg);
+  background-image: url(./../assets/img/caret-right-solid.svg);
   background-repeat: no-repeat;
   position: absolute;
   height: 17px;
@@ -730,7 +1116,7 @@ button {
 .left_block_offer {
   width: 767px;
   min-height: 529px;
-  background-image: url(./assets/img/offer_bcg.jpg);
+  background-image: url(./../assets/img/offer_bcg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -844,7 +1230,7 @@ button {
 }
 
 .block_beach {
-  background-image: url(./assets/img/bcg-beach.jpg);
+  background-image: url(./../assets/img/bcg-beach.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 438px;
@@ -1374,8 +1760,8 @@ button {
   position: absolute;
   top: 40px;
   border: 1px solid #e8e8e8;
-//z-index: -1;
-//transition: .4s;
+  //z-index: -1;
+  //transition: .4s;
 
 }
 
@@ -1396,7 +1782,7 @@ button {
   left: -15px;
   height: 118px;
   width: 255px;
-  background-image: url(./assets/img/man_submenu.png);
+  background-image: url(./../assets/img/man_submenu.png);
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -1470,7 +1856,7 @@ button {
 .block__cart {
   width: 32px;
   height: 29px;
-  background-image: url(./assets/img/cart.svg);
+  background-image: url(./../assets/img/cart.svg);
 }
 
 .block__cart:hover {
@@ -1499,11 +1885,11 @@ button {
 }
 
 .content__1 {
-  background-image: url(./assets/img/cart_image_boy.png);
+  background-image: url(./../assets/img/cart_image_boy.png);
 }
 
 .content__2 {
-  background-image: url(./assets/img/cart_image_girl.png);
+  background-image: url(./../assets/img/cart_image_girl.png);
 }
 
 .fa-times-circle {
@@ -1777,7 +2163,7 @@ button {
 
 .left_menu_list:hover .left__summary::after {
   content: "";
-  background-image: url(./assets/img/left_menu_marker__hover.png);
+  background-image: url(./../assets/img/left_menu_marker__hover.png);
   background-repeat: no-repeat;
   width: 9px;
   height: 6px;
@@ -1804,7 +2190,7 @@ button {
 
 .left__summary::after {
   content: "";
-  background-image: url(./assets/img/left_menu_marker.png);
+  background-image: url(./../assets/img/left_menu_marker.png);
   background-repeat: no-repeat;
   width: 9px;
   height: 6px;
@@ -1820,7 +2206,7 @@ button {
 
 .left__details[open] > .left__summary::after {
   content: "";
-  background-image: url(./assets/img/left_menu_marker__open.png);
+  background-image: url(./../assets/img/left_menu_marker__open.png);
   background-repeat: no-repeat;
   width: 9px;
   height: 6px;
@@ -2026,7 +2412,7 @@ button {
 
 .sort_div_summary::after {
   content: "";
-  background-image: url(./assets/img/left_menu_marker.png);
+  background-image: url(./../assets/img/left_menu_marker.png);
   background-repeat: no-repeat;
   width: 9px;
   height: 6px;
@@ -2037,7 +2423,7 @@ button {
 
 .details_name[open] > .sort_div_summary::after {
   content: "";
-  background-image: url(./assets/img/left_menu_marker_up.png);
+  background-image: url(./../assets/img/left_menu_marker_up.png);
   background-repeat: no-repeat;
   width: 9px;
   height: 6px;
@@ -2045,7 +2431,7 @@ button {
 
 sort_div_summary:after {
   content: "";
-  background-image: url(./assets/img/left_menu_marker.png);
+  background-image: url(./../assets/img/left_menu_marker.png);
   background-repeat: no-repeat;
   width: 5200px;
   height: 5200px;
@@ -2304,7 +2690,7 @@ input[type=checkbox]:checked + .label8::before {
 }
 
 .sub__left {
-  background-image: url(./assets/img/reboot.png);
+  background-image: url(./../assets/img/reboot.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
@@ -2312,7 +2698,7 @@ input[type=checkbox]:checked + .label8::before {
 }
 
 .sub__right {
-  background-image: url(./assets/img/heart.png);
+  background-image: url(./../assets/img/heart.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
@@ -2849,7 +3235,7 @@ input[type=radio] {
 
 .choose__size_summary_drop::after {
   content: "";
-  background-image: url("./assets/img/choose_down.png");
+  background-image: url("./../assets/img/choose_down.png");
   background-repeat: no-repeat;
   height: 5px;
   width: 9px;
@@ -2857,7 +3243,7 @@ input[type=radio] {
 
 .choose__color_summary_drop::after {
   content: "";
-  background-image: url("./assets/img/choose_down.png");
+  background-image: url("./../assets/img/choose_down.png");
   background-repeat: no-repeat;
   height: 5px;
   width: 9px;
@@ -2865,7 +3251,7 @@ input[type=radio] {
 
 .choose__size_details[open] > .choose__size_summary_drop::after {
   content: "";
-  background-image: url("./assets/img/choose_up.png");
+  background-image: url("./../assets/img/choose_up.png");
   background-repeat: no-repeat;
   height: 5px;
   width: 9px;
@@ -2873,7 +3259,7 @@ input[type=radio] {
 
 .choose__size_details[open] > .choose__color_summary_drop::after {
   content: "";
-  background-image: url("./assets/img/choose_up.png");
+  background-image: url("./../assets/img/choose_up.png");
   background-repeat: no-repeat;
   height: 5px;
   width: 9px;
@@ -3129,7 +3515,7 @@ input[type=radio] {
 .shopping__image {
   width: 100px;
   height: 115px;
-  background-image: url("./assets/img/product__content1.jpg");
+  background-image: url("./../assets/img/product__content1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -3137,7 +3523,7 @@ input[type=radio] {
 .shopping__image2 {
   width: 100px;
   height: 115px;
-  background-image: url("./assets/img/product__content2.jpg");
+  background-image: url("./../assets/img/product__content2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -3145,7 +3531,7 @@ input[type=radio] {
 .shopping__image3 {
   width: 100px;
   height: 115px;
-  background-image: url("./assets/img/product__content3.jpg");
+  background-image: url("./../assets/img/product__content3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -3390,7 +3776,7 @@ input[type=radio] {
 
 .text_view_summary::after {
   content: "";
-  background-image: url(./assets/img/left_menu_marker.png);
+  background-image: url(./../assets/img/left_menu_marker.png);
   background-repeat: no-repeat;
   width: 9px;
   height: 6px;
@@ -3406,7 +3792,7 @@ input[type=radio] {
 
 .coup__details[open] > .text_view_summary::after {
   content: "";
-  background-image: url(./assets/img/left_menu_marker__open.png);
+  background-image: url(./../assets/img/left_menu_marker__open.png);
   background-repeat: no-repeat;
   width: 9px;
   height: 6px;

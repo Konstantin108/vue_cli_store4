@@ -1,20 +1,11 @@
 <template>
-  <div id="app">
-    <v-main-wrapper></v-main-wrapper>
-  </div>
+  <div class="v-cart"></div>
 </template>
 
 <script>
-import vMainWrapper from './components/v-main-wrapper'
-
 export default {
-  name: 'App',
-  components: {
-    vMainWrapper
-  }
+  name: "v-cart"
 }
-
-
 </script>
 
 <style lang="scss">
@@ -140,9 +131,9 @@ a {
   color: #222222;
   display: block;
 
-//margin-bottom: 20px;
+  //margin-bottom: 20px;
   margin-top: 16px;
-//border-bottom: 3px solid #ffffff;
+  //border-bottom: 3px solid #ffffff;
   transition: .4s;
 }
 
@@ -165,7 +156,7 @@ a {
 .promo {
   height: 613px;
   background-color: #e8e8e8;
-  background-image: url(./assets/img/promo.png);
+  background-image: url(./../assets/img/promo.png);
   background-repeat: no-repeat;
   background-position: center -51px;
   display: flex;
@@ -207,7 +198,7 @@ a {
 }
 
 .block__img1 {
-  background-image: url(./assets/img/img_men.jpg);
+  background-image: url(./../assets/img/img_men.jpg);
   width: 560px;
   height: 542px;
   margin-right: 20px;
@@ -218,7 +209,7 @@ a {
 .block__img2 {
   width: 560px;
   height: 261px;
-  background-image: url(./assets/img/img_women.jpg);
+  background-image: url(./../assets/img/img_women.jpg);
   margin-bottom: 20px;
   transition: .4s;
 }
@@ -226,13 +217,13 @@ a {
 .block__img3 {
   width: 560px;
   height: 261px;
-  background-image: url(./assets/img/img_accer.jpg);
+  background-image: url(./../assets/img/img_accer.jpg);
   margin-right: 20px;
   transition: .4s;
 }
 
 .block__img4 {
-  background-image: url(./assets/img/img_kid.jpg);
+  background-image: url(./../assets/img/img_kid.jpg);
   width: 560px;
   height: 542px;
   transition: .4s;
@@ -357,7 +348,7 @@ a {
 
 .summary_browse::after {
   content: "";
-  background-image: url(./assets/img/caret-down-solid.svg);
+  background-image: url(./../assets/img/caret-down-solid.svg);
   background-repeat: no-repeat;
   position: absolute;
   height: 16px;
@@ -369,7 +360,7 @@ a {
 
 .details_browse[open] > .summary_browse::after {
   content: "";
-  background-image: url(./assets/img/caret-right-solid.svg);
+  background-image: url(./../assets/img/caret-right-solid.svg);
   background-repeat: no-repeat;
   position: absolute;
   height: 17px;
@@ -730,7 +721,7 @@ button {
 .left_block_offer {
   width: 767px;
   min-height: 529px;
-  background-image: url(./assets/img/offer_bcg.jpg);
+  background-image: url(./../assets/img/offer_bcg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -844,7 +835,7 @@ button {
 }
 
 .block_beach {
-  background-image: url(./assets/img/bcg-beach.jpg);
+  background-image: url(./../assets/img/bcg-beach.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 438px;
@@ -1374,8 +1365,8 @@ button {
   position: absolute;
   top: 40px;
   border: 1px solid #e8e8e8;
-//z-index: -1;
-//transition: .4s;
+  //z-index: -1;
+  //transition: .4s;
 
 }
 
@@ -1396,7 +1387,7 @@ button {
   left: -15px;
   height: 118px;
   width: 255px;
-  background-image: url(./assets/img/man_submenu.png);
+  background-image: url(./../assets/img/man_submenu.png);
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -1470,7 +1461,7 @@ button {
 .block__cart {
   width: 32px;
   height: 29px;
-  background-image: url(./assets/img/cart.svg);
+  background-image: url(./../assets/img/cart.svg);
 }
 
 .block__cart:hover {
@@ -1499,11 +1490,11 @@ button {
 }
 
 .content__1 {
-  background-image: url(./assets/img/cart_image_boy.png);
+  background-image: url(./../assets/img/cart_image_boy.png);
 }
 
 .content__2 {
-  background-image: url(./assets/img/cart_image_girl.png);
+  background-image: url(./../assets/img/cart_image_girl.png);
 }
 
 .fa-times-circle {
@@ -1777,7 +1768,7 @@ button {
 
 .left_menu_list:hover .left__summary::after {
   content: "";
-  background-image: url(./assets/img/left_menu_marker__hover.png);
+  background-image: url(./../assets/img/left_menu_marker__hover.png);
   background-repeat: no-repeat;
   width: 9px;
   height: 6px;
@@ -1804,7 +1795,7 @@ button {
 
 .left__summary::after {
   content: "";
-  background-image: url(./assets/img/left_menu_marker.png);
+  background-image: url(./../assets/img/left_menu_marker.png);
   background-repeat: no-repeat;
   width: 9px;
   height: 6px;
@@ -1820,7 +1811,7 @@ button {
 
 .left__details[open] > .left__summary::after {
   content: "";
-  background-image: url(./assets/img/left_menu_marker__open.png);
+  background-image: url(./../assets/img/left_menu_marker__open.png);
   background-repeat: no-repeat;
   width: 9px;
   height: 6px;
@@ -2026,7 +2017,7 @@ button {
 
 .sort_div_summary::after {
   content: "";
-  background-image: url(./assets/img/left_menu_marker.png);
+  background-image: url(./../assets/img/left_menu_marker.png);
   background-repeat: no-repeat;
   width: 9px;
   height: 6px;
@@ -2037,7 +2028,7 @@ button {
 
 .details_name[open] > .sort_div_summary::after {
   content: "";
-  background-image: url(./assets/img/left_menu_marker_up.png);
+  background-image: url(./../assets/img/left_menu_marker_up.png);
   background-repeat: no-repeat;
   width: 9px;
   height: 6px;
@@ -2045,7 +2036,7 @@ button {
 
 sort_div_summary:after {
   content: "";
-  background-image: url(./assets/img/left_menu_marker.png);
+  background-image: url(./../assets/img/left_menu_marker.png);
   background-repeat: no-repeat;
   width: 5200px;
   height: 5200px;
@@ -2304,7 +2295,7 @@ input[type=checkbox]:checked + .label8::before {
 }
 
 .sub__left {
-  background-image: url(./assets/img/reboot.png);
+  background-image: url(./../assets/img/reboot.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
@@ -2312,7 +2303,7 @@ input[type=checkbox]:checked + .label8::before {
 }
 
 .sub__right {
-  background-image: url(./assets/img/heart.png);
+  background-image: url(./../assets/img/heart.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
@@ -2849,7 +2840,7 @@ input[type=radio] {
 
 .choose__size_summary_drop::after {
   content: "";
-  background-image: url("./assets/img/choose_down.png");
+  background-image: url("./../assets/img/choose_down.png");
   background-repeat: no-repeat;
   height: 5px;
   width: 9px;
@@ -2857,7 +2848,7 @@ input[type=radio] {
 
 .choose__color_summary_drop::after {
   content: "";
-  background-image: url("./assets/img/choose_down.png");
+  background-image: url("./../assets/img/choose_down.png");
   background-repeat: no-repeat;
   height: 5px;
   width: 9px;
@@ -2865,7 +2856,7 @@ input[type=radio] {
 
 .choose__size_details[open] > .choose__size_summary_drop::after {
   content: "";
-  background-image: url("./assets/img/choose_up.png");
+  background-image: url("./../assets/img/choose_up.png");
   background-repeat: no-repeat;
   height: 5px;
   width: 9px;
@@ -2873,7 +2864,7 @@ input[type=radio] {
 
 .choose__size_details[open] > .choose__color_summary_drop::after {
   content: "";
-  background-image: url("./assets/img/choose_up.png");
+  background-image: url("./../assets/img/choose_up.png");
   background-repeat: no-repeat;
   height: 5px;
   width: 9px;
@@ -3129,7 +3120,7 @@ input[type=radio] {
 .shopping__image {
   width: 100px;
   height: 115px;
-  background-image: url("./assets/img/product__content1.jpg");
+  background-image: url("./../assets/img/product__content1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -3137,7 +3128,7 @@ input[type=radio] {
 .shopping__image2 {
   width: 100px;
   height: 115px;
-  background-image: url("./assets/img/product__content2.jpg");
+  background-image: url("./../assets/img/product__content2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -3145,7 +3136,7 @@ input[type=radio] {
 .shopping__image3 {
   width: 100px;
   height: 115px;
-  background-image: url("./assets/img/product__content3.jpg");
+  background-image: url("./../assets/img/product__content3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -3390,7 +3381,7 @@ input[type=radio] {
 
 .text_view_summary::after {
   content: "";
-  background-image: url(./assets/img/left_menu_marker.png);
+  background-image: url(./../assets/img/left_menu_marker.png);
   background-repeat: no-repeat;
   width: 9px;
   height: 6px;
@@ -3406,7 +3397,7 @@ input[type=radio] {
 
 .coup__details[open] > .text_view_summary::after {
   content: "";
-  background-image: url(./assets/img/left_menu_marker__open.png);
+  background-image: url(./../assets/img/left_menu_marker__open.png);
   background-repeat: no-repeat;
   width: 9px;
   height: 6px;

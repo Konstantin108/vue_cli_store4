@@ -1,0 +1,23 @@
+ - В автоматическом режиме устанавливаем Babel
+
+ - In dedicated config files - ok
+
+ - Save this as a preset for future projects - N
+
+ - Открываем файл package.json, находим объект "dependencies", добавляем свойство "vuex": "^3.1.2"
+
+ - Запускаем терминал, выполняем команду npm install axios
+
+ - Открываем файл package.json, находим объект "devDependencies", добавляем свойство "node-sass": "^4.13.0"
+
+ - Открываем файл package.json, находим объект "devDependencies", добавляем свойство "sass-loader": "^8.0.0"
+
+ - Запускаем терминал, выполняем команду npm install -g json-server
+
+ - Создаём в корневой папке проекта файл db.json и заполняем данными из файла json-sever_readme.txt
+
+ - Открываем файл package.json, находим объект "dependencies", добавляем свойство "material-design-icons-iconfont": "^5.0.1"
+
+ - Запускаем терминал, выполняем команду npm install
+
+ - В файле main.js импортируем модуль import 'material-design-icons-iconfont'
