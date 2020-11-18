@@ -1,52 +1,124 @@
 {
   "products": [
     {
-      "image": "1.jpg",
-      "name": "T-shirt 1",
-      "price": 210,
+      "id": "1",
+      "image": "photo1.jpg",
+      "name": "MANGO PEOPLE T-SHIRT",
+      "price": 145,
       "article": "T1",
       "available": true,
-      "category": "man's clothing"
+      "category": "man collection",
+      "color": "white",
+      "size": "XXS",
+      "shipping": "free",
+      "material": "cotton",
+      "designer": "binburhan",
+      "quantity": 1
     },
     {
-      "image": "2.jpg",
-      "name": "T-shirt 2",
+      "id": "2",
+      "image": "photo2.jpg",
+      "name": "BRANDY TOP-MARINE",
       "price": 315,
       "article": "T2",
       "available": true,
-      "category": "women's clothing"
+      "category": "women collection",
+      "color": "red",
+      "size": "XS",
+      "shipping": "free",
+      "material": "corduroy",
+      "designer": "Le Corbusier",
+      "quantity":  1
     },
     {
-      "image": "3.jpg",
-      "name": "T-shirt 3",
+      "id": "3",
+      "image": "photo3.jpg",
+      "name": "KOLTUR JACKET",
       "price": 420,
       "article": "T3",
       "available": false,
-      "category": "man's clothing"
+      "category": "man collection",
+      "color": "blue",
+      "size": "S",
+      "shipping": "free",
+      "material": "cotton",
+      "designer": "binburhan",
+      "quantity":  1
     },
     {
-      "image": "4.jpg",
-      "name": "T-shirt 4",
+      "id": "4",
+      "image": "photo4.jpg",
+      "name": "CYRIL SHIRT",
       "price": 530,
       "article": "T4",
       "available": true,
-      "category": "women's clothing"
+      "category": "women collection",
+      "color": "white",
+      "size": "M",
+      "shipping": "free",
+      "material": "velvet",
+      "designer": "Le Corbusier",
+      "quantity":  1
     },
     {
-      "image": "5.jpg",
-      "name": "T-shirt 5",
+      "id": "5",
+      "image": "photo5.jpg",
+      "name": "MILLIE SHIRT",
       "price": 650,
       "article": "T5",
       "available": false,
-      "category": "women's clothing"
+      "category": "women collection",
+      "color": "black",
+      "size": "XXS",
+      "shipping": "free",
+      "material": "silk",
+      "designer": "Isamu Noguchi",
+      "quantity":  1
     },
     {
-      "image": "6.jpg",
-      "name": "T-shirt 6",
+      "id": "6",
+      "image": "photo6.jpg",
+      "name": "BONNET MIKKI",
       "price": 870,
       "article": "T6",
       "available": true,
-      "category": "man's clothing"
+      "category": "man collection",
+      "color": "grey",
+      "size": "XS",
+      "shipping": "free",
+      "material": "denim",
+      "designer": "Philippe Starck",
+      "quantity":  1
+    },
+    {
+      "id": "7",
+      "image": "photo7.jpg",
+      "name": "CHOP CHOP",
+      "price": 870,
+      "article": "T7",
+      "available": true,
+      "category": "man collection",
+      "color": "white",
+      "size": "XXL",
+      "shipping": "free",
+      "material": "denim",
+      "designer": "Isamu Noguchi",
+      "quantity":  1
+    },
+    {
+      "id": "8",
+      "image": "photo8.jpg",
+      "name": "DEEP NAVY SUEDE",
+      "price": 870,
+      "article": "T8",
+      "available": true,
+      "category": "man collection",
+      "color": "black",
+      "size": "XL",
+      "shipping": "free",
+      "material": "linen",
+      "designer": "Joe Colombo",
+      "quantity":  1
     }
   ]
 }

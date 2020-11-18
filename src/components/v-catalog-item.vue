@@ -1,23 +1,42 @@
 <template>
   <div class="v-catalog-item">
     <div class="block__featured">
-      <div class="block__self8"><img src="./../assets/img/photo8.jpg" alt="photo___8"
-                                     class="photo___8 featured__photo">
-        <a href="single_page.html" class="cart__hover"> <img src="./../assets/img/cart_hover.svg"
-                                                             alt="cart_hover_img"
-                                                             class="cart_hover_img">
+      <div class="block__self8">
+        <img
+            :src="require('./../assets/img/' + product_data.image)"
+            alt="photo"
+            class="photo___8 featured__photo">
+        <a class="cart__hover"
+            @click="addToCart"
+        >
+          <img src="./../assets/img/cart_hover.svg"
+               alt="cart_hover_img"
+               class="cart_hover_img">
           <p class="hover_text">Add to Cart</p>
         </a>
       </div>
-      <p class="featured_text">Mango People T-shirt</p>
-      <p class="featured_text2">$52.00</p>
+      <p class="featured_text">{{ product_data.name }}</p>
+      <p class="featured_text2">${{ product_data.price }}</p>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "v-catalog-item"
+  name: "v-catalog-item",
+  props:{
+    product_data:{
+      type: Object,
+      default(){
+        return{}
+      }
+    }
+  },
+  methods:{
+    addToCart(){
+      this.$emit('addToCart', this.product_data)
+    }
+  }
 }
 </script>
 
@@ -3110,9 +3129,9 @@ input[type=radio] {
   color: #656565;
 }
 
-.shopping_cal::-webkit-inner-spin-button {
-  display: none;
-}
+//.shopping_cal::-webkit-inner-spin-button {
+//  display: none;
+//}
 
 .shopping_cal {
   width: 54px;

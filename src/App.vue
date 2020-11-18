@@ -3106,9 +3106,9 @@ input[type=radio] {
   color: #656565;
 }
 
-.shopping_cal::-webkit-inner-spin-button {
-  display: none;
-}
+//.shopping_cal::-webkit-inner-spin-button {
+//  display: none;
+//}
 
 .shopping_cal {
   width: 54px;

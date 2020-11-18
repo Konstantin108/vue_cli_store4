@@ -16,6 +16,8 @@
 
  - Создаём в корневой папке проекта файл db.json и заполняем данными из файла json-sever_readme.txt
 
+ - Запускаем терминал, выполняем команду npm install vue-router
+
  - Открываем файл package.json, находим объект "dependencies", добавляем свойство "material-design-icons-iconfont": "^5.0.1"
 
  - Запускаем терминал, выполняем команду npm install

@@ -1,134 +1,62 @@
 <template>
-  <div class="v-catalog">
-    <div class="promo center">
-      <section class="promo__content">
-        <h2 class="promo__h2 line__hight_drand">THE BRAND</h2>
-        <h3 class="promo__h3">OF LUXERIOUS <span class="promo__color">FASHION</span></h3>
-      </section>
+  <div class="v-cart-item left_basis_block border_for_test">
+    <a class="link_to_product">
+      <img
+          :src="require('./../assets/img/' + cart_item_data.image)"
+          alt="photo"
+          class="shopping__image3 hover_shopping__image">
+      <div class="shopping_main_text">
+        <p class="shopping_line_title">{{ cart_item_data.name }}</p>
+        <div class="shopping__plus_text">
+          <span class="shopping_text1">Color:</span>
+          <span class="shopping_text2">{{ cart_item_data.color }}</span>
+          <br>
+          <span class="shopping_text1">Size:</span>
+          <span class="shopping_text2">{{ cart_item_data.size }}</span>
+        </div>
+      </div>
+    </a>
+    <div class="cart-item-display">
+      <div class="block_shopping_1 proba_standart_parameter border_for_test line__shopping_other">
+        ${{ cart_item_data.price }}
+      </div>
+      <div class="block_shopping_2 proba_standart_parameter border_for_test line__shopping_other">
+        <div class="shopping_cal">{{ cart_item_data.quantity }}</div>
+      </div>
+      <div class="block_shopping_3 proba_standart_parameter border_for_test line__shopping_other">
+        {{cart_item_data.shipping}}
+      </div>
+      <div class="block_shopping_4 proba_standart_parameter border_for_test line__shopping_other">
+        $300
+      </div>
+      <div class="block_shopping_5 proba_standart_parameter border_for_test line__shopping_other">
+        <div class="btn_for_v-cart-item" @click="deleteFromCart">X</div>
+      </div>
     </div>
-    <div class="blocks_img center">
-      <div class="block__img1 block__img_trans">
-        <article class="text__block1 block__text_transform">
-          <p class="title_block_img">HOT DEAL</p>
-          <h3 class="title_block_img2">FOR MEN</h3>
-        </article>
-      </div>
-      <div class="block__img3 block__img_trans">
-        <article class="text__block3 block__text_transform">
-          <p class="title_block_img">LUXIROS & TRENDY</p>
-          <h3 class="title_block_img2">ACCESORIES</h3>
-        </article>
-      </div>
-      <div class="block__img2 block__img_trans">
-        <article class="text__block2 block__text_transform">
-          <p class="title_block_img">30% OFFER</p>
-          <h3 class="title_block_img2">WOMEN</h3>
-        </article>
-      </div>
-      <div class="block__img4 block__img_trans">
-        <article class="text__block4 block__text_transform">
-          <p class="title_block_img">NEW ARRIVALS</p>
-          <h3 class="title_block_img2">FOR KIDS</h3>
-        </article>
-      </div>
-    </div>
-    <div class="clr"></div>
-    <section class="fetured center">
-      <h3 class="fetured__title">Fetured Items</h3>
-      <p class="fetured__text">Shop for items based on what we featured in this week</p>
-      <div class="blocks__position_featured center">
-
-        <v-catalog-item
-            v-for="product in PRODUCTS"
-            :key="product.article"
-            :product_data="product"
-            @addToCart="addToCart"
-        >
-        </v-catalog-item>
-
-
-      </div>
-    </section>
-    <div class="clearfix"></div>
-    <div class="space center">
-    </div>
-    <aside class="offer_block">
-      <div class="left_block_offer">
-        <div class="offer_text_box">
-          <h1 class="offer_title">30% <span class="special_color_offer">offer</span></h1>
-          <p class="offer_text">for women</p>
-        </div>
-      </div>
-      <div class="right_block_offer">
-        <div class="right__subblock_offer">
-          <img src="./../assets/img/forma_car.png" alt="forma_car" class="forma_car">
-          <div class="offer_text_right">
-            <div class="offer_paragraph1">Free Delivery</div>
-            <div class="offer_paragraph2">Worldwide delivery on&nbsp;all. Authorit tively morph
-              next-generation
-              innov tion with extensive models.
-            </div>
-          </div>
-        </div>
-        <div class="right__subblock_offer">
-          <img
-              src="./../assets/img/forma_sale.png" alt="forma_sale" class="forma_sale">
-          <div class="offer_text_right">
-            <div class="offer_paragraph1">Sales&nbsp;&&nbsp;discounts</div>
-            <div class="offer_paragraph2">Worldwide delivery on&nbsp;all. Authorit tively morph
-              next-generation
-              innov tion with extensive models.
-            </div>
-          </div>
-        </div>
-        <div class="right__subblock_offer">
-          <img src="./../assets/img/forma_king.png" alt="forma_king" class="forma_king">
-          <div class="offer_text_right">
-            <div class="offer_paragraph1">Quality&nbsp;assurance</div>
-            <div class="offer_paragraph2">Worldwide delivery on&nbsp;all. Authorit tively morph
-              next-generation
-              innov tion with extensive models.
-            </div>
-          </div>
-        </div>
-      </div>
-    </aside>
-
-
-
   </div>
 </template>
 
 <script>
-import vCatalogItem from './v-catalog-item'
-import{mapActions} from 'vuex'     //<-- импортируем actions и getters из vuex
-import {mapGetters} from 'vuex'
-
 export default {
-  name: "v-catalog",
-  data(){
-    return{
-
-    }
+  name: "v-cart-item",
+  data() {
+    return {}
   },
-  components:{
-    vCatalogItem
+  methods: {
+    deleteFromCart() {
+      this.$emit('deleteFromCart')
+    },
   },
-  computed:{
-    ...mapGetters([
-      'PRODUCTS'     //<-- получаем компонент из getters
-    ]),
+  computed: {},
+  mounted() {
+    //this.$set(this.cart_item_data, 'quantity', 1)     <-- добавляем ключ quantity в объект массива
   },
-  mounted() {     //<-- при хуке mounted вызываем компонент
-    this.GET_PRODUCTS_FROM_API()
-  },
-  methods:{
-    ...mapActions([
-        'GET_PRODUCTS_FROM_API',     //<-- получаем action, теперь к нему можно обратиться через this
-        'ADD_TO_CART'
-    ]),
-    addToCart(data){
-      this.ADD_TO_CART(data);
+  props: {
+    cart_item_data: {
+      type: Object,
+      default() {
+        return {}
+      }
     }
   }
 }
@@ -145,7 +73,7 @@ export default {
 }
 
 html,
-body{
+body {
   height: 100%;
 }
 
@@ -156,6 +84,7 @@ body {
 a {
   text-decoration: none;
 }
+
 
 .center {
   padding: 0 calc(50% - 570px);
@@ -176,7 +105,6 @@ a {
 .top {
   flex-grow: 1;
 }
-
 
 
 .header {
@@ -212,6 +140,24 @@ a {
   text-decoration: none;
   margin-right: 46px;
   transition: .4s;
+}
+
+.cart-item-display{
+  width: 800px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 210px;
+}
+
+.btn_for_v-cart-item{
+  cursor: pointer;
+  transition: .1s;
+}
+
+.btn_for_v-cart-item:hover{
+  cursor: pointer;
+  color: #f16d7f;
+  transform: scale(1.2);
 }
 
 .logo:hover {
@@ -493,9 +439,6 @@ a {
   width: 16px;
   color: #838383;
 }
-
-
-
 
 
 .arrow {
@@ -864,7 +807,7 @@ button {
 
 }
 
-.right__subblock_offer{
+.right__subblock_offer {
   display: flex;
   width: 373px;
   justify-content: space-between;
@@ -872,7 +815,7 @@ button {
   padding-left: 36px;
 }
 
-.forma_sale{
+.forma_sale {
   height: 40px;
   width: 40px;
 }
@@ -933,7 +876,7 @@ button {
   width: 81px;
 }
 
-.forma_king{
+.forma_king {
   height: 35px;
   width: 47px;
 }
@@ -944,13 +887,11 @@ button {
 }
 
 
-
 .offer_text_right {
   width: 219px;
   min-height: 140px;
   padding-left: 5px;
 }
-
 
 
 .block_color {
@@ -1441,8 +1382,6 @@ button {
 }
 
 
-
-
 .drop__last {
   right: -200px;
 }
@@ -1495,7 +1434,6 @@ button {
   //transition: .4s;
 
 }
-
 
 
 .drop__fleximg {
@@ -2473,9 +2411,11 @@ input[type=checkbox]:checked + .label8::before {
   color: #b3b2b2;
   transition: .4s;
 }
-.subscribe__form{
+
+.subscribe__form {
   display: flex;
 }
+
 .shipping__button {
   width: 180px;
   height: 50px;
@@ -3144,9 +3084,10 @@ input[type=radio] {
 }
 
 .left_basis_block {
-  width: 490px;
   display: flex;
   align-items: center;
+  width: 1140px;
+  justify-content: space-between;
 }
 
 .link_to_product {
@@ -3221,6 +3162,7 @@ input[type=radio] {
   line-height: 20px;
   font-weight: 400;
   color: #656565;
+  text-transform: uppercase;
 }
 
 //.shopping_cal::-webkit-inner-spin-button {
@@ -3307,6 +3249,8 @@ input[type=radio] {
   line-height: 20px;
   font-weight: 300;
   color: #6f6e6e;
+  margin-left: 4px;
+  text-transform: capitalize;
 }
 
 .clear__cart {

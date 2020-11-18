@@ -6,7 +6,11 @@
 
 
 
-
+<!--          <v-cart-->
+<!--            v-if="CART.length"-->
+<!--            :cart_data="CART"-->
+<!--          >-->
+<!--          </v-cart>-->
 
             <a class="logo" href="index.html"><img src="./../assets/img/logo.png" alt="logo" class="logo__img"><span
                 class="bran_weight">BRAN</span><span class="special__color_logo">D</span></a>
@@ -90,13 +94,28 @@
                         </div>
                       </li>
                     </ul>
+
+                    <v-cart
+                        v-if="CART.length"
+                        :cart_data="CART"
+                    >
+                    </v-cart>
+
                     <div class="total">
                       <p class="text__total">total</p>
                       <p class="summ">$500.00</p>
                     </div>
                     <a href="checkout.html" class="cart__button_sub">Checkout</a>
-                    <a href="shopping_cart.html" class="cart__button_sub last__button">Go to cart</a>
 
+                    <!--    здесь связываем сart_data из v-cart с CART    -->
+
+                    <router-link :to="{name: 'cart', params:{cart_data: CART}}">
+                        <a
+                            href="shopping_cart.html"
+                            class="cart__button_sub last__button"
+                        >Go to cart
+                        </a>
+                    </router-link>
                   </div>
                 </div>
               </li>
@@ -286,7 +305,9 @@
           </ul>
         </nav>
 
-        <v-catalog></v-catalog>
+        <keep-alive>
+          <router-view></router-view>
+        </keep-alive>
 
       </div>
 
@@ -383,6 +404,8 @@
 
 <script>
 import vCatalog from './v-catalog'
+import vCart from './v-cart'
+import {mapGetters} from 'vuex'
 
 
 export default {
@@ -390,6 +413,7 @@ export default {
   props:{},
   components:{
     vCatalog,
+    vCart
   },
   data(){
     return{}
@@ -397,7 +421,11 @@ export default {
   methods:{
 
   },
-  computed:{},
+  computed:{
+    ...mapGetters([
+       'CART'
+    ]),
+  },
   mounted() {
   }
 }
@@ -3492,9 +3520,9 @@ input[type=radio] {
   color: #656565;
 }
 
-.shopping_cal::-webkit-inner-spin-button {
-  display: none;
-}
+//.shopping_cal::-webkit-inner-spin-button {
+//  display: none;
+//}
 
 .shopping_cal {
   width: 54px;
