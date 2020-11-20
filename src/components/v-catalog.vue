@@ -51,10 +51,14 @@
     </section>
     <div class="clearfix"></div>
     <div class="space center">
-      <a href="Product.html" class="button_right">Browse All Product<img src="./../assets/img/arrow_right.png"
-                                                                         alt="arrow_right"
-                                                                         class="arrow_right">
-      </a>
+
+      <router-link :to="{name: 'allProducts'}">
+        <div class="button_right">Browse All Product<img src="./../assets/img/arrow_right.png"
+                                                                           alt="arrow_right"
+                                                                           class="arrow_right">
+        </div>
+      </router-link>
+
     </div>
     <aside class="offer_block">
       <div class="left_block_offer">

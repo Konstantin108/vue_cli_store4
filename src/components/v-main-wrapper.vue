@@ -81,11 +81,10 @@
                     <!--    здесь связываем сart_data из v-cart с CART    -->
 
                     <router-link :to="{name: 'cart', params:{cart_data: CART}}">
-                        <a
-                            href="shopping_cart.html"
+                        <div
                             class="cart__button_sub last__button"
                         >Go to cart
-                        </a>
+                        </div>
                     </router-link>
                   </div>
                 </div>
