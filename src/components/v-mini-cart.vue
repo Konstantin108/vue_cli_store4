@@ -3,16 +3,17 @@
 
     <ul class="drop__il">
       <v-mini-cart-item
-          v-for="item in mini_cart_data"
+          v-for="(item, index) in mini_cart_data"
           :key="item.article"
           :mini_cart_item_data="item"
+          @deleteFromMiniCart="deleteFromMiniCart(index)"
       >
       </v-mini-cart-item>
     </ul>
 
     <div class="total">
       <p class="text__total">total</p>
-      <p class="summ">$500.00</p>
+      <p class="summ">${{miniCartTotalCost}}</p>
     </div>
 
   </div>
@@ -20,6 +21,7 @@
 
 <script>
 import vMiniCartItem from './v-mini-cart-item'
+import {mapActions} from 'vuex'
 
 export default {
   name: "v-mini-cart",
@@ -32,6 +34,26 @@ export default {
       default() {
         return [];
       }
+    }
+  },
+  methods:{
+    ...mapActions([
+      'DELETE_FROM_CART'
+    ]),
+    deleteFromMiniCart(index){
+      this.DELETE_FROM_CART(index);
+    }
+  },
+  computed:{
+    miniCartTotalCost(){
+      let result = [];
+      for(let item of this.mini_cart_data){
+        result.push(item.price * item.quantity);
+      }
+      result = result.reduce(function(sum, el){
+        return sum + el;
+      })
+      return result;
     }
   },
 }

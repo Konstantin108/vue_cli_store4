@@ -12,8 +12,11 @@
                                                       class="stars">
           <p class="cart__price_2">{{ mini_cart_item_data.quantity }} x ${{ mini_cart_item_data.price }}</p>
         </div>
-      </div> <a href="#" class="delete_cart_item"><i
-        class="fas fa-times-circle"></i></a>
+      </div>
+      <div class="delete_cart_item">
+<!--        <i class="fas fa-times-circle"></i>-->
+        <div class="btn_for_v-cart-item" @click="deleteFromMiniCart">X</div>
+      </div>
     </div>
   </li>
 
@@ -28,6 +31,11 @@ export default {
       default() {
         return {}
       }
+    }
+  },
+  methods:{
+    deleteFromMiniCart(){
+      this.$emit('deleteFromMiniCart');
     }
   }
 }

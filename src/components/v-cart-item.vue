@@ -21,13 +21,15 @@
         ${{ cart_item_data.price }}
       </div>
       <div class="block_shopping_2 proba_standart_parameter border_for_test line__shopping_other">
-        <div class="shopping_cal">{{ cart_item_data.quantity }}</div>
+        <span class="plus_minus" @click="decrementItem">-</span>
+        <div class="shopping_cal quantity_mlr">{{ cart_item_data.quantity }}</div>
+        <span class="plus_minus" @click="incrementItem">+</span>
       </div>
       <div class="block_shopping_3 proba_standart_parameter border_for_test line__shopping_other">
         {{cart_item_data.shipping}}
       </div>
       <div class="block_shopping_4 proba_standart_parameter border_for_test line__shopping_other">
-        $300
+        ${{ cart_item_data.quantity * cart_item_data.price }}
       </div>
       <div class="block_shopping_5 proba_standart_parameter border_for_test line__shopping_other">
         <div class="btn_for_v-cart-item" @click="deleteFromCart">X</div>
@@ -46,6 +48,12 @@ export default {
     deleteFromCart() {
       this.$emit('deleteFromCart')
     },
+    decrementItem(){
+      this.$emit('decrement');
+    },
+    incrementItem(){
+      this.$emit('increment');
+    }
   },
   computed: {},
   mounted() {
@@ -152,6 +160,15 @@ a {
 .btn_for_v-cart-item{
   cursor: pointer;
   transition: .1s;
+}
+
+.plus_minus{
+  cursor: pointer;
+}
+
+.quantity_mlr{
+  margin-left: 6px;
+  margin-right: 3px;
 }
 
 .btn_for_v-cart-item:hover{

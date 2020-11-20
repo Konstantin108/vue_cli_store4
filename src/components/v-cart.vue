@@ -29,6 +29,8 @@
         :key="item.article"
         :cart_item_data="item"
         @deleteFromCart="deleteFromCart(index)"
+        @decrement="decrement(index)"
+        @increment="increment(index)"
       >
       </v-cart-item>
       </div>
@@ -62,13 +64,13 @@
       </div>
       <div class="coup_block3">
         <div class="coup__sub_block3">
-          <div>
-            <span class="sub__total_price">Sub total</span><span
-              class="sub__total_price ml_distance">$900</span>
-          </div>
+<!--          <div>-->
+<!--            <span class="sub__total_price">Sub total</span><span-->
+<!--              class="sub__total_price ml_distance">$900</span>-->
+<!--          </div>-->
           <div>
             <span class="coup_title">GRAND TOTAL</span><span
-              class="coup_title_special_color ml_distance">$900</span>
+              class="coup_title_special_color ml_distance">${{cartTotalCost}}</span>
           </div>
         </div>
         <div class="to__checkout text__coupon_position">proceed to checkout</div>
@@ -101,13 +103,37 @@ export default {
   },
   methods:{
     ...mapActions([
-       'DELETE_FROM_CART'
+       'DELETE_FROM_CART',
+       'INCREMENT_CART_ITEM',
+       'DECREMENT_CART_ITEM'
     ]),
     deleteFromCart(index){
       this.DELETE_FROM_CART(index);
+    },
+    increment(index){
+      this.INCREMENT_CART_ITEM(index);
+    },
+    decrement(index){
+      this.DECREMENT_CART_ITEM(index);
     }
   },
-  computed:{},
+  computed:{
+    cartTotalCost(){
+      let result = [];
+
+      if(this.cart_data.length){
+        for(let item of this.cart_data){
+          result.push(item.price * item.quantity);
+        }
+        result = result.reduce(function(sum, el){
+          return sum + el;
+        })
+        return result;
+      }else{
+        return 0;
+      }
+    },
+  },
   mounted() {
   }
 }
