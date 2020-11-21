@@ -1846,7 +1846,7 @@ button {
   visibility: visible;
   opacity: 1;
   transform: translateY(0) scale(1);
-  z-index: 3;
+  z-index: 15;
 }
 
 .cart_block {

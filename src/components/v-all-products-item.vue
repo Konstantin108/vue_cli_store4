@@ -1,315 +1,48 @@
 <template>
-  <div class="v-all-products">
+  <div class="v-all-products-item">
 
-
-
-    <nav class="arrivals_product center">
-      <h2 class="arrivals_title">New Arrivals</h2>
-      <nav class="readcrumbs_arrivals"><a href="index.html" class="link_arrivals">Home/</a> <a href="#"
-                                                                                               class="link_arrivals">Men/</a>
-        <a href="#" class="link_arrivals">New Arrivals</a></nav>
-    </nav>
-    <div class="space_product"></div>
-    <div class="clearfix"></div>
-    <div class="main_content center">
-      <div class="left_submenu ">
-        <ul class="left_menu__product">
-          <li class="left_menu_list">
-
-            <v-select
-                :options="options"
-                @select="optionSelect"
-            >
-            </v-select>
-
-          </li>
-          <li class="left_menu_list list__top">
-
-            
-
-
-            <details class="left__details">
-              <summary class="left__summary">BRAND</summary>
-              <ul class="drop__left_menu">
-                <li class="drop__left_list"><a href="#" class="drop__left_link">Accessories</a></li>
-                <li class="drop__left_list"><a href="#" class="drop__left_link">Bags</a></li>
-                <li class="drop__left_list"><a href="#" class="drop__left_link">Denim</a></li>
-                <li class="drop__left_list"><a href="#" class="drop__left_link">Hoodies &
-                  Sweatshirts</a></li>
-                <li class="drop__left_list"><a href="#" class="drop__left_link">Jackets & Coats</a></li>
-                <li class="drop__left_list"><a href="#" class="drop__left_link">Pants</a></li>
-                <li class="drop__left_list"><a href="#" class="drop__left_link">Polos</a></li>
-                <li class="drop__left_list"><a href="#" class="drop__left_link">Shirts</a></li>
-                <li class="drop__left_list"><a href="#" class="drop__left_link">Shoes</a></li>
-                <li class="drop__left_list"><a href="#" class="drop__left_link">Shorts</a></li>
-                <li class="drop__left_list"><a href="#" class="drop__left_link">Sweaters & Knits</a>
-                </li>
-                <li class="drop__left_list"><a href="#" class="drop__left_link">T-Shirts</a></li>
-                <li class="drop__left_list"><a href="#" class="drop__left_link">Tanks</a></li>
-              </ul>
-            </details>
-          </li>
-          <li class="left_menu_list list__top">
-            <details class="left__details">
-              <summary class="left__summary">dESIGNER</summary>
-              <ul class="drop__left_menu">
-                <li class="drop__left_list"><a href="#" class="drop__left_link">Accessories</a></li>
-                <li class="drop__left_list"><a href="#" class="drop__left_link">Bags</a></li>
-                <li class="drop__left_list"><a href="#" class="drop__left_link">Denim</a></li>
-                <li class="drop__left_list"><a href="#" class="drop__left_link">Hoodies &
-                  Sweatshirts</a></li>
-                <li class="drop__left_list"><a href="#" class="drop__left_link">Jackets & Coats</a></li>
-                <li class="drop__left_list"><a href="#" class="drop__left_link">Pants</a></li>
-                <li class="drop__left_list"><a href="#" class="drop__left_link">Polos</a></li>
-                <li class="drop__left_list"><a href="#" class="drop__left_link">Shirts</a></li>
-                <li class="drop__left_list"><a href="#" class="drop__left_link">Shoes</a></li>
-                <li class="drop__left_list"><a href="#" class="drop__left_link">Shorts</a></li>
-                <li class="drop__left_list"><a href="#" class="drop__left_link">Sweaters & Knits</a>
-                </li>
-                <li class="drop__left_list"><a href="#" class="drop__left_link">T-Shirts</a></li>
-                <li class="drop__left_list"><a href="#" class="drop__left_link">Tanks</a></li>
-              </ul>
-            </details>
-          </li>
-        </ul>
+    <div class="block__featured">
+      <div class="block__self8">
+        <img
+            :src="require('./../assets/img/' + all_products_item_data.image)"
+            alt="photo"
+            class="photo___8 featured__photo">
+        <a class="cart__hover"
+           @click="addToCart"
+        >
+          <img src="./../assets/img/cart_hover.svg"
+               alt="cart_hover_img"
+               class="cart_hover_img">
+          <p class="hover_text">Add to Cart</p>
+        </a>
       </div>
-      <div class="right_content_block ">
-        <div class="checkboxes">
-
-<!--          <div class="block1">-->
-<!--            <p class="title_now">trending now</p>-->
-<!--            <div class="link_now">-->
-<!--              <div class="subblock1">-->
-<!--                <div class="now_list"><a href="#" class="now_link paddi__link1">Bohemian</a></div>-->
-<!--                <div class="now_list"><a href="#" class="now_link paddi__link2">Floral</a></div>-->
-<!--                <div class="now_list"><a href="#" class="now_link now_link3 paddi__link3">Lace</a></div>-->
-<!--              </div>-->
-<!--              <div class="subblock1">-->
-<!--                <div class="now_list"><a href="#" class="now_link paddi__link4">Floral</a></div>-->
-<!--                <div class="now_list"><a href="#" class="now_link paddi__link5">Lace</a></div>-->
-<!--                <div class="now_list"><a href="#" class="now_link now_link3 paddi__link6">Bohemian</a>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--          <div class="block2">-->
-<!--            <p class="title_size">size</p>-->
-<!--            <div class="checkboxes__boxes">-->
-<!--              <div class="subblock1 block_up">-->
-<!--                <div class="check_position up_posit">-->
-<!--                  <input type="checkbox" id="checkbox1" name="size">-->
-<!--                  <label for="checkbox1" class="label1">xxs</label>-->
-<!--                </div>-->
-<!--                <div class="check_position up_posit">-->
-<!--                  <input type="checkbox" id="checkbox2" name="size">-->
-<!--                  <label for="checkbox2" class="label1">xs</label>-->
-<!--                </div>-->
-<!--                <div class="check_position up_posit">-->
-<!--                  <input type="checkbox" id="checkbox3" name="size">-->
-<!--                  <label for="checkbox3" class="label1">s</label>-->
-<!--                </div>-->
-<!--                <div class="check_position up_posit">-->
-<!--                  <input type="checkbox" id="checkbox4" name="size">-->
-<!--                  <label for="checkbox4" class="label1">m</label>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--              <div class="subblock1">-->
-<!--                <div class="check_position l-position up_posit">-->
-<!--                  <input type="checkbox" id="checkbox5" name="size">-->
-<!--                  <label for="checkbox5" class="label1">l</label>-->
-<!--                </div>-->
-<!--                <div class="check_position up_posit">-->
-<!--                  <input type="checkbox" id="checkbox6" name="size">-->
-<!--                  <label for="checkbox6" class="label1">xl</label>-->
-<!--                </div>-->
-<!--                <div class="check_position up_posit">-->
-<!--                  <input type="checkbox" id="checkbox7" name="size">-->
-<!--                  <label for="checkbox7" class="label1">xxl</label>-->
-<!--                </div>-->
-<!--                <div class="check_position up_posit">-->
-<!--                  <input type="checkbox" id="checkbox8" name="size">-->
-<!--                  <label for="checkbox8" class="label8"></label>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
-          <div class="block3">
-            <p class="title_size">price</p>
-            <input type="range" id="range" value="10" step="0.1">
-            <div class="dollars">
-              <p class="dollar">$52</p>
-              <p class="dollar">$4400</p>
-            </div>
-          </div>
-        </div>
-        <div class="sortby_product">
-          <div class="sortby__box">
-            <div class="forms__box">
-
-
-              {{  selected  }}
-
-
-<!--              <form action="#" class="sort">-->
-<!--                <div class="sort__by">Sort By</div>-->
-<!--                <details class="sort__name details_name">-->
-<!--                  <summary class="sort_name_summary sort_div_summary">Name</summary>-->
-<!--                  <ul class="sort_name_ul">-->
-<!--                    <li class="name_ul_list"><a href="" class="name_ul_link">Price</a></li>-->
-<!--                    <li class="name_ul_list"><a href="" class="name_ul_link">New</a></li>-->
-<!--                    <li class="name_ul_list"><a href="" class="name_ul_link">Most Wanted</a></li>-->
-<!--                    <li class="name_ul_list"><a href="" class="name_ul_link">Color</a></li>-->
-<!--                  </ul>-->
-<!--                </details>-->
-<!--              </form>-->
-<!--              <form action="#" class="sort">-->
-<!--                <div class="show__by">Show</div>-->
-<!--                <details class="sort__name  details_name">-->
-<!--                  <summary class="sort_09_summary sort_div_summary">09</summary>-->
-<!--                  <ul class="sort_name_ul name_ul_width">-->
-<!--                    <li class="name_ul_list"><a href="#" class="name_ul_link">12</a></li>-->
-<!--                    <li class="name_ul_list"><a href="#" class="name_ul_link">10</a></li>-->
-<!--                    <li class="name_ul_list"><a href="#" class="name_ul_link">5</a></li>-->
-<!--                  </ul>-->
-<!--                </details>-->
-<!--              </form>-->
-            </div>
-          </div>
-        </div>
-        <div class="products_sort ">
-
-          <v-all-products-item
-              v-for="product in filteredProducts"
-              :key="product.article"
-              :all_products_item_data="product"
-              @addToCart="addToCart"
-          >
-          </v-all-products-item>
-
-        </div>
-
-        <div class="footer__for_product ">
-          <div class="letters">
-<!--            <ul class="number__letters">-->
-<!--              <li class="number__list"><a href="#" class="number"><i class="fas fa-chevron-left"></i></a>-->
-<!--              </li>-->
-<!--              <li class="number__list"><a href="#" class="number">1</a></li>-->
-<!--              <li class="number__list"><a href="#" class="number">2</a></li>-->
-<!--              <li class="number__list"><a href="#" class="number">3</a></li>-->
-<!--              <li class="number__list"><a href="#" class="number">4</a></li>-->
-<!--              <li class="number__list"><a href="#" class="number">5</a></li>-->
-<!--              <li class="number__list"><a href="#" class="number">6</a></li>-->
-<!--              <li class="number__list"><a href="#" class="number">20</a></li>-->
-<!--              <li class="number__list"><a href="#" class="number"><i class="fas fa-chevron-right"></i></a>-->
-<!--              </li>-->
-<!--            </ul>-->
-          </div>
-<!--          <a href="#" class="view"><b>View All</b></a>-->
-        </div>
-      </div>
+      <p class="featured_text">{{ all_products_item_data.name }}</p>
+      <p class="featured_text2">${{ all_products_item_data.price }}</p>
     </div>
-    <div class="clearfix"></div>
-    <div class="black_product center">
-      <div class="about_servis"><img src="./../assets/img/forma_car.png" alt="product_img_car" class="product_img_car">
-        <p class="product_text1">Free Delivery</p>
-        <p class="product_text2">Worldwide delivery on&nbsp;all. Authorit tively morph next-generation innov
-          tion with
-          extensive models.</p>
-      </div>
-      <div class="about_servis"><img src="./../assets/img/forma_sale.png" alt="product_img_sale" class="product_img_sale">
-        <p class="product_text1">Sales & discounts</p>
-        <p class="product_text2">Worldwide delivery on&nbsp;all. Authorit tively morph next-generation innov
-          tion with
-          extensive models.</p>
-      </div>
-      <div class="about_servis"><img src="./../assets/img/forma_king.png" alt="product_img_king" class="product_img_king">
-        <p class="product_text1">Quality assurance</p>
-        <p class="product_text2">Worldwide delivery on&nbsp;all. Authorit tively morph next-generation innov
-          tion with
-          extensive models.</p>
-      </div>
-    </div>
-
+    
   </div>
 </template>
 
 <script>
-import vAllProductsItem from './v-all-products-item'
-import vSelect from './v-select'
-import{mapActions} from 'vuex'     //<-- импортируем actions и getters из vuex
-import {mapGetters} from 'vuex'
-
 export default {
-  name: "v-all-products",
-  components:{
-    vAllProductsItem,
-    vSelect
-  },
+  name: "v-all-products-item",
   data(){
-    return{
-      options:[
-        {
-          name: 'All Items',
-          value: 1
-        },
-        {
-          name: 't-shirt',
-          value: 2
-        },
-        {
-          name: 'jacket',
-          value: 3
-        },
-        {
-          name: 'denim',
-          value: 4
-        },
-        {
-          name: 'shirt',
-          value: 5
-        } ,
-        {
-          name: 'pants',
-          value: 6
-        }
-      ],
-      selected: '',
-      sortedProducts:[]
-    }
+    return{}
   },
-  props:{},
-  methods:{
-    ...mapActions([
-      'GET_PRODUCTS_FROM_API',     //<-- получаем action, теперь к нему можно обратиться через this
-      'ADD_TO_CART'
-    ]),
-    addToCart(data){
-      this.ADD_TO_CART(data);
-    },
-    optionSelect(category){
-      this.sortedProducts = [];
-      let vm = this;
-      this.PRODUCTS.map(function (item) {
-        if(item.category === category.name){
-          vm.sortedProducts.push(item)
-        }
-      })
-      this.selected = category.name;
-    }
-  },
-  mounted() {
-    this.GET_PRODUCTS_FROM_API()
-  },
-  computed:{
-    ...mapGetters([
-      'PRODUCTS'     //<-- получаем компонент из getters
-    ]),
-    filteredProducts(){
-      if(this.sortedProducts.length){
-        return this.sortedProducts;
-      }else{
-        return this.PRODUCTS;
+  props:{
+    all_products_item_data:{
+      type: Object,
+      default(){
+        return{}
       }
+    }
+  },
+  computed:{},
+  mounted() {
+  },
+  methods:{
+    addToCart(){
+      this.$emit('addToCart', this.all_products_item_data)
     }
   }
 }
@@ -326,7 +59,7 @@ export default {
 }
 
 html,
-body {
+body{
   height: 100%;
 }
 
@@ -337,7 +70,6 @@ body {
 a {
   text-decoration: none;
 }
-
 
 .center {
   padding: 0 calc(50% - 570px);
@@ -358,6 +90,7 @@ a {
 .top {
   flex-grow: 1;
 }
+
 
 
 .header {
@@ -393,33 +126,6 @@ a {
   text-decoration: none;
   margin-right: 46px;
   transition: .4s;
-}
-
-.cart-item-display{
-  width: 800px;
-  display: flex;
-  justify-content: space-between;
-  margin-left: 210px;
-}
-
-.btn_for_v-cart-item{
-  cursor: pointer;
-  transition: .1s;
-}
-
-.plus_minus{
-  cursor: pointer;
-}
-
-.quantity_mlr{
-  margin-left: 6px;
-  margin-right: 3px;
-}
-
-.btn_for_v-cart-item:hover{
-  cursor: pointer;
-  color: #f16d7f;
-  transform: scale(1.2);
 }
 
 .logo:hover {
@@ -703,6 +409,9 @@ a {
 }
 
 
+
+
+
 .arrow {
   margin-left: 6px;
   margin-bottom: 1px;
@@ -887,7 +596,7 @@ a {
   padding-left: 14px;
 }
 
-.featured_link {
+.v-all-products-item {
   display: block;
   width: 261px;
   min-height: 372px;
@@ -895,15 +604,15 @@ a {
 
 }
 
-.featured_link:hover .photo___1 {
+.v-all-products-item:hover .photo___1 {
   filter: brightness(70%);
 }
 
-.featured_link:hover .photo___2 {
+.v-all-products-item:hover .photo___2 {
   filter: brightness(70%);
 }
 
-.featured_link:hover .photo___3 {
+.v-all-products-item:hover .photo___3 {
   filter: brightness(70%);
 }
 
@@ -911,23 +620,23 @@ a {
   width: 261px;
 }
 
-.featured_link:hover .photo___4 {
+.v-all-products-item:hover .photo___4 {
   filter: brightness(70%);
 }
 
-.featured_link:hover .photo___5 {
+.v-all-products-item:hover .photo___5 {
   filter: brightness(70%);
 }
 
-.featured_link:hover .photo___6 {
+.v-all-products-item:hover .photo___6 {
   filter: brightness(70%);
 }
 
-.featured_link:hover .photo___7 {
+.v-all-products-item:hover .photo___7 {
   filter: brightness(70%);
 }
 
-.featured_link:hover .photo___8 {
+.v-all-products-item:hover .photo___8 {
   filter: brightness(70%);
 }
 
@@ -942,7 +651,7 @@ a {
   transition: .4s;
 }
 
-.featured_link:hover .cart__hover {
+.v-all-products-item:hover .cart__hover {
   display: flex;
   position: absolute;
   height: 39px;
@@ -954,16 +663,16 @@ a {
   border-radius: 3px;
 }
 
-.featured_link:hover .sub__hover {
+.v-all-products-item:hover .sub__hover {
   display: flex;
 }
 
-.featured_link:hover .cart_hover_img {
+.v-all-products-item:hover .cart_hover_img {
   display: block;
   padding-left: 8px;
 }
 
-.featured_link:hover .hover_text {
+.v-all-products-item:hover .hover_text {
   display: inline;
   padding-top: 9px;
   padding-left: 3px;
@@ -1069,7 +778,7 @@ button {
 
 }
 
-.right__subblock_offer {
+.right__subblock_offer{
   display: flex;
   width: 373px;
   justify-content: space-between;
@@ -1077,7 +786,7 @@ button {
   padding-left: 36px;
 }
 
-.forma_sale {
+.forma_sale{
   height: 40px;
   width: 40px;
 }
@@ -1138,7 +847,7 @@ button {
   width: 81px;
 }
 
-.forma_king {
+.forma_king{
   height: 35px;
   width: 47px;
 }
@@ -1149,11 +858,13 @@ button {
 }
 
 
+
 .offer_text_right {
   width: 219px;
   min-height: 140px;
   padding-left: 5px;
 }
+
 
 
 .block_color {
@@ -1644,6 +1355,8 @@ button {
 }
 
 
+
+
 .drop__last {
   right: -200px;
 }
@@ -1696,6 +1409,7 @@ button {
   //transition: .4s;
 
 }
+
 
 
 .drop__fleximg {
@@ -2047,7 +1761,7 @@ button {
 .checkboxes {
   height: 115px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .sortby_product {
@@ -2265,7 +1979,6 @@ button {
   width: 282px;
   display: flex;
   justify-content: space-between;
-  text-transform: capitalize;
 }
 
 .sort__by {
@@ -2637,7 +2350,7 @@ input[type=checkbox]:checked + .label8::before {
   transition: .4s;
 }
 
-.featured_link:hover .photo___9 {
+.v-all-products-item:hover .photo___9 {
   filter: brightness(70%);
 }
 
@@ -2674,11 +2387,9 @@ input[type=checkbox]:checked + .label8::before {
   color: #b3b2b2;
   transition: .4s;
 }
-
-.subscribe__form {
+.subscribe__form{
   display: flex;
 }
-
 .shipping__button {
   width: 180px;
   height: 50px;
@@ -3347,10 +3058,9 @@ input[type=radio] {
 }
 
 .left_basis_block {
+  width: 490px;
   display: flex;
   align-items: center;
-  width: 1140px;
-  justify-content: space-between;
 }
 
 .link_to_product {
@@ -3425,7 +3135,6 @@ input[type=radio] {
   line-height: 20px;
   font-weight: 400;
   color: #656565;
-  text-transform: uppercase;
 }
 
 //.shopping_cal::-webkit-inner-spin-button {
@@ -3512,8 +3221,6 @@ input[type=radio] {
   line-height: 20px;
   font-weight: 300;
   color: #6f6e6e;
-  margin-left: 4px;
-  text-transform: capitalize;
 }
 
 .clear__cart {
