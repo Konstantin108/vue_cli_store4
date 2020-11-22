@@ -1,12 +1,10 @@
 <template>
-
   <div class="v-header-select">
     <div class="summary_browse browse details_browse" @click="isHeaderVisible = !isHeaderVisible">Browse</div>
     <div
         class="header-select"
         v-if="isHeaderVisible"
     >
-
         <div
             class="header__option"
             v-for="headerCategory in headerCategories"
@@ -15,7 +13,6 @@
         >
           {{ headerCategory.name }}
         </div>
-
     </div>
   </div>
 </template>
@@ -1792,12 +1789,7 @@ button {
   height: 98px;
 }
 
-.products_sort {
-  display: flex;
-  flex-wrap: wrap;
-  padding-top: 7px;
-  justify-content: space-between;
-}
+
 
 .product_link {
   margin-top: 41px;

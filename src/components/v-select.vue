@@ -1,6 +1,4 @@
 <template>
-
-
   <div class="v-select">
     <div class="left__summary" @click="areOptionsVisible = !areOptionsVisible">CATEGORY</div>
     <div
@@ -1767,12 +1765,7 @@ button {
   height: 98px;
 }
 
-.products_sort {
-  display: flex;
-  flex-wrap: wrap;
-  padding-top: 7px;
-  justify-content: space-between;
-}
+
 
 .product_link {
   margin-top: 41px;

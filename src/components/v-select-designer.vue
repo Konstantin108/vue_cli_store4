@@ -1,5 +1,4 @@
 <template>
-
   <div class="v-select-designer">
     <div class="left__summary" @click="areDesignersVisible = !areDesignersVisible">DESIGNERS</div>
     <div
@@ -1766,12 +1765,7 @@ button {
   height: 98px;
 }
 
-.products_sort {
-  display: flex;
-  flex-wrap: wrap;
-  padding-top: 7px;
-  justify-content: space-between;
-}
+
 
 .product_link {
   margin-top: 41px;

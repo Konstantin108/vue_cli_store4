@@ -1,13 +1,17 @@
 <template>
   <div class="v-all-products">
-
-
-
     <nav class="arrivals_product center">
       <h2 class="arrivals_title">New Arrivals</h2>
-      <nav class="readcrumbs_arrivals"><a href="index.html" class="link_arrivals">Home/</a> <a href="#"
-                                                                                               class="link_arrivals">Men/</a>
-        <a href="#" class="link_arrivals">New Arrivals</a></nav>
+      <nav class="readcrumbs_arrivals">
+
+        <router-link :to="{name: 'catalog'}">
+          <div class="link_arrivals">Home</div>
+        </router-link>
+
+<!--        <div class="link_arrivals">Men/</div>-->
+<!--        <div class="link_arrivals">New Arrivals</div>-->
+
+      </nav>
     </nav>
     <div class="space_product"></div>
     <div class="clearfix"></div>
@@ -172,6 +176,7 @@
               :key="product.article"
               :all_products_item_data="product"
               @addToCart="addToCart"
+              @productClick="productClick"
           >
           </v-all-products-item>
 
@@ -322,6 +327,9 @@ export default {
       'GET_PRODUCTS_FROM_API',     //<-- получаем action, теперь к нему можно обратиться через this
       'ADD_TO_CART'
     ]),
+    productClick(article){
+      this.$router.push(  { name: 'product', query: {  'product': article  }});
+    },
     addToCart(data){
       this.ADD_TO_CART(data);
     },
@@ -2083,6 +2091,7 @@ button {
   text-transform: uppercase;
   color: #636363;
   transition: .4s;
+  cursor: pointer;
 }
 
 .link_arrivals:hover {

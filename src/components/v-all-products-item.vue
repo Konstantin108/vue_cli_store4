@@ -1,6 +1,5 @@
 <template>
   <div class="v-all-products-item">
-
     <div class="block__featured">
       <div class="block__self8">
         <img
@@ -16,10 +15,9 @@
           <p class="hover_text">Add to Cart</p>
         </a>
       </div>
-      <p class="featured_text">{{ all_products_item_data.name }}</p>
+      <p class="featured_text" @click="productClick">{{ all_products_item_data.name }}</p>
       <p class="featured_text2">${{ all_products_item_data.price }}</p>
     </div>
-    
   </div>
 </template>
 
@@ -43,6 +41,9 @@ export default {
   methods:{
     addToCart(){
       this.$emit('addToCart', this.all_products_item_data)
+    },
+    productClick(){
+      this.$emit('productClick', this.all_products_item_data.article);
     }
   }
 }
@@ -1769,12 +1770,7 @@ button {
   height: 98px;
 }
 
-.products_sort {
-  display: flex;
-  flex-wrap: wrap;
-  padding-top: 7px;
-  justify-content: space-between;
-}
+
 
 .product_link {
   margin-top: 41px;

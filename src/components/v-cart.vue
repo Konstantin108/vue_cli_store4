@@ -2,9 +2,15 @@
   <div class="v-cart">
     <nav class="arrivals_product center">
       <h2 class="arrivals_title">New Arrivals</h2>
-      <nav class="readcrumbs_arrivals"><a href="index.html" class="link_arrivals">Home/</a> <a href="#"
-                                                                                               class="link_arrivals">Men/</a>
-        <a href="#" class="link_arrivals">New Arrivals</a></nav>
+      <nav class="readcrumbs_arrivals">
+
+        <router-link :to="{name: 'catalog'}">
+          <div class="link_arrivals">Home</div>
+        </router-link>
+
+        <!--        <div class="link_arrivals">Men/</div>-->
+        <!--        <div class="link_arrivals">New Arrivals</div>-->
+      </nav>
     </nav>
 
     <div class="center">
@@ -31,11 +37,10 @@
         @deleteFromCart="deleteFromCart(index)"
         @decrement="decrement(index)"
         @increment="increment(index)"
+        @productClick="productClick"
       >
       </v-cart-item>
       </div>
-
-
 
     </div>
 
@@ -45,11 +50,11 @@
         <details class="coup__details">
           <summary class="text_view text_view_summary">Bangladesh</summary>
           <ul class="drop__view_menu">
-            <li class="drop__view_list"><a href="#" class="drop__view_link">Moscow</a></li>
-            <li class="drop__view_list"><a href="#" class="drop__view_link">berlin</a></li>
-            <li class="drop__view_list"><a href="#" class="drop__view_link">Washington</a></li>
-            <li class="drop__view_list"><a href="#" class="drop__view_link">Tokyo</a></li>
-            <li class="drop__view_list"><a href="#" class="drop__view_link">Vienna</a></li>
+            <li class="drop__view_list"><div class="drop__view_link">Moscow</div></li>
+            <li class="drop__view_list"><div class="drop__view_link">berlin</div></li>
+            <li class="drop__view_list"><div class="drop__view_link">Washington</div></li>
+            <li class="drop__view_list"><div class="drop__view_link">Tokyo</div></li>
+            <li class="drop__view_list"><div class="drop__view_link">Vienna</div></li>
           </ul>
         </details>
         <input type="text" class="text_view" placeholder="State">
@@ -83,7 +88,7 @@
 
 <script>
 import vCartItem from './v-cart-item'
-import {mapActions} from 'vuex'
+import {mapActions, mapGetters} from 'vuex'
 
 export default {
   name: "v-cart",
@@ -105,8 +110,12 @@ export default {
     ...mapActions([
        'DELETE_FROM_CART',
        'INCREMENT_CART_ITEM',
-       'DECREMENT_CART_ITEM'
+       'DECREMENT_CART_ITEM',
+      'GET_PRODUCTS_FROM_API',
     ]),
+    productClick(article){
+      this.$router.push(  { name: 'product', query: {  'product': article  }});
+    },
     deleteFromCart(index){
       this.DELETE_FROM_CART(index);
     },
@@ -118,6 +127,10 @@ export default {
     }
   },
   computed:{
+    ...mapGetters([
+        'PRODUCTS',
+        'CART'
+    ]),
     cartTotalCost(){
       let result = [];
 
@@ -135,6 +148,7 @@ export default {
     },
   },
   mounted() {
+    this.GET_PRODUCTS_FROM_API()
   }
 }
 </script>
@@ -1774,6 +1788,7 @@ button {
   text-transform: uppercase;
   color: #636363;
   transition: .4s;
+  cursor: pointer;
 }
 
 .link_arrivals:hover {
@@ -1863,12 +1878,7 @@ button {
   height: 98px;
 }
 
-.products_sort {
-  display: flex;
-  flex-wrap: wrap;
-  padding-top: 7px;
-  justify-content: space-between;
-}
+
 
 .product_link {
   margin-top: 41px;
@@ -3615,7 +3625,7 @@ input[type=radio] {
   margin-left: 22px;
   text-transform: capitalize;
   transition: .4s;
-
+  cursor: pointer;
 }
 
 .logo1 {
