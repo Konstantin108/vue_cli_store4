@@ -7,7 +7,8 @@ Vue.use(Vuex);
 let store = new Vuex.Store({
     state:{     //<-- создаём пустой массив
         products:[],
-        cart:[]
+        cart:[],
+        searchValue: ''
     },
     mutations:{     //<-- мутация наполняет state
         SET_PRODUCTS_TO_STATE:(state, products) => {
@@ -39,6 +40,9 @@ let store = new Vuex.Store({
             if(state.cart[index].quantity > 1){
                 state.cart[index].quantity--
             }
+        },
+        SET_SEARCH_VALUE_TO_VUEX:(state, value) => {
+            state.searchValue = value;
         }
     },
     actions:{
@@ -66,6 +70,9 @@ let store = new Vuex.Store({
         },
         DELETE_FROM_CART({commit}, index){
             commit('REMOVE_FROM_CART', index);
+        },
+        GET_SEARCH_VALUE_TO_VUEX({commit}, value){
+            commit('SET_SEARCH_VALUE_TO_VUEX', value);
         }
     },
     getters:{     //<-- получает и возвращает данные из state в компонент
@@ -74,6 +81,9 @@ let store = new Vuex.Store({
         },
         CART(state){
             return state.cart;
+        },
+        SEARCH_VALUE(state){
+            return state.searchValue;
         }
     }
 });

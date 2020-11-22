@@ -1,6 +1,8 @@
 <template>
   <div class="v-cart-item left_basis_block border_for_test">
-    <a class="link_to_product">
+    <a class="link_to_product"
+       @click="productClick"
+    >
       <img
           :src="require('./../assets/img/' + cart_item_data.image)"
           alt="photo"
@@ -45,6 +47,9 @@ export default {
     return {}
   },
   methods: {
+    productClick(){
+      this.$emit('productClick', this.cart_item_data.article);
+    },
     deleteFromCart() {
       this.$emit('deleteFromCart')
     },
@@ -1809,12 +1814,7 @@ button {
   height: 98px;
 }
 
-.products_sort {
-  display: flex;
-  flex-wrap: wrap;
-  padding-top: 7px;
-  justify-content: space-between;
-}
+
 
 .product_link {
   margin-top: 41px;

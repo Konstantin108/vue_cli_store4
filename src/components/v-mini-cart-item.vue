@@ -3,6 +3,7 @@
     <div class="cart__content">
       <div class="drop__link cart__product_mini">
         <img
+            @click="productClick"
             :src="require('./../assets/img/' + mini_cart_item_data.image)"
             alt="photo"
             class="cart__image__content">
@@ -36,6 +37,9 @@ export default {
   methods:{
     deleteFromMiniCart(){
       this.$emit('deleteFromMiniCart');
+    },
+    productClick(){
+      this.$emit('productClick', this.mini_cart_item_data.article);
     }
   }
 }
@@ -1780,12 +1784,7 @@ button {
   height: 98px;
 }
 
-.products_sort {
-  display: flex;
-  flex-wrap: wrap;
-  padding-top: 7px;
-  justify-content: space-between;
-}
+
 
 .product_link {
   margin-top: 41px;

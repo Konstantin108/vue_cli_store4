@@ -7,13 +7,15 @@
       "price": 145,
       "article": "T1",
       "available": true,
-      "category": "man collection",
+      "sex": "man collection",
       "color": "white",
       "size": "XXS",
       "shipping": "free",
       "material": "cotton",
       "designer": "binburhan",
-      "quantity": 1
+      "quantity": 1,
+      "category": "t-shirt",
+      "brand": "Prada"
     },
     {
       "id": "2",
@@ -22,13 +24,15 @@
       "price": 315,
       "article": "T2",
       "available": true,
-      "category": "women collection",
+      "sex": "women collection",
       "color": "red",
       "size": "XS",
       "shipping": "free",
       "material": "corduroy",
       "designer": "Le Corbusier",
-      "quantity":  1
+      "quantity":  1,
+      "category": "jacket",
+      "brand":  "Prada"
     },
     {
       "id": "3",
@@ -37,13 +41,15 @@
       "price": 420,
       "article": "T3",
       "available": false,
-      "category": "man collection",
+      "sex": "man collection",
       "color": "blue",
       "size": "S",
       "shipping": "free",
       "material": "cotton",
       "designer": "binburhan",
-      "quantity":  1
+      "quantity":  1,
+      "category": "denim",
+      "brand":  "Prada"
     },
     {
       "id": "4",
@@ -52,13 +58,15 @@
       "price": 530,
       "article": "T4",
       "available": true,
-      "category": "women collection",
+      "sex": "women collection",
       "color": "white",
       "size": "M",
       "shipping": "free",
       "material": "velvet",
       "designer": "Le Corbusier",
-      "quantity":  1
+      "quantity":  1,
+      "category": "shirt",
+      "brand":  "Burberry"
     },
     {
       "id": "5",
@@ -67,13 +75,15 @@
       "price": 650,
       "article": "T5",
       "available": false,
-      "category": "women collection",
+      "sex": "women collection",
       "color": "black",
       "size": "XXS",
       "shipping": "free",
       "material": "silk",
       "designer": "Isamu Noguchi",
-      "quantity":  1
+      "quantity":  1,
+      "category": "t-shirt",
+      "brand":  "Burberry"
     },
     {
       "id": "6",
@@ -82,43 +92,49 @@
       "price": 650,
       "article": "T6",
       "available": true,
-      "category": "man collection",
+      "sex": "man collection",
       "color": "grey",
       "size": "XS",
       "shipping": "free",
       "material": "denim",
       "designer": "Philippe Starck",
-      "quantity":  1
+      "quantity":  1,
+      "category": "jacket",
+      "brand":  "Burberry"
     },
     {
       "id": "7",
       "image": "photo7.jpg",
-      "name": "CHOP CHOP",
+      "name": "CHOP PANTS",
       "price": 990,
       "article": "T7",
       "available": true,
-      "category": "man collection",
+      "sex": "man collection",
       "color": "white",
       "size": "XXL",
       "shipping": "free",
       "material": "denim",
       "designer": "Isamu Noguchi",
-      "quantity":  1
+      "quantity":  1,
+      "category": "pants",
+      "brand":  "Chanel"
     },
     {
       "id": "8",
       "image": "photo8.jpg",
-      "name": "DEEP NAVY SUEDE",
+      "name": "DEEP NAVY PANTS",
       "price": 870,
       "article": "T8",
       "available": true,
-      "category": "man collection",
+      "sex": "man collection",
       "color": "black",
       "size": "XL",
       "shipping": "free",
       "material": "linen",
       "designer": "Joe Colombo",
-      "quantity":  1
+      "quantity":  1,
+      "category": "pants",
+      "brand":  "Chanel"
     }
   ]
 }

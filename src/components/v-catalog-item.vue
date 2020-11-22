@@ -15,7 +15,11 @@
           <p class="hover_text">Add to Cart</p>
         </a>
       </div>
-      <p class="featured_text">{{ product_data.name }}</p>
+      <p class="featured_text"
+         @click="productClick"
+      >
+        {{ product_data.name }}
+      </p>
       <p class="featured_text2">${{ product_data.price }}</p>
     </div>
   </div>
@@ -35,6 +39,9 @@ export default {
   methods:{
     addToCart(){
       this.$emit('addToCart', this.product_data)
+    },
+    productClick(){
+      this.$emit('productClick', this.product_data.article);
     }
   }
 }
@@ -576,6 +583,8 @@ a {
   color: #222222;
   margin-top: 20px;
   padding-left: 15px;
+  transition: .2s;
+  cursor: pointer;
 }
 
 .featured_text2 {
@@ -586,6 +595,11 @@ a {
   color: #f16d7f;
   margin-top: 17px;
   padding-left: 14px;
+}
+
+.featured_text:hover{
+  transform: scale(1.05);
+  color: #f16d7f;
 }
 
 .v-catalog-item {
@@ -677,6 +691,7 @@ a {
 .cart__hover {
   display: none;
   transition: .4s;
+  cursor: pointer;
 }
 
 .cart__hover:hover {
@@ -1760,12 +1775,7 @@ button {
   height: 98px;
 }
 
-.products_sort {
-  display: flex;
-  flex-wrap: wrap;
-  padding-top: 7px;
-  justify-content: space-between;
-}
+
 
 .product_link {
   margin-top: 41px;

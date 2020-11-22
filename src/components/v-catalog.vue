@@ -43,18 +43,22 @@
             :key="product.article"
             :product_data="product"
             @addToCart="addToCart"
+            @productClick="productClick"
         >
         </v-catalog-item>
-
 
       </div>
     </section>
     <div class="clearfix"></div>
     <div class="space center">
-      <a href="Product.html" class="button_right">Browse All Product<img src="./../assets/img/arrow_right.png"
-                                                                         alt="arrow_right"
-                                                                         class="arrow_right">
-      </a>
+
+      <router-link :to="{name: 'allProducts'}">
+        <div class="button_right">Browse All Product<img src="./../assets/img/arrow_right.png"
+                                                                           alt="arrow_right"
+                                                                           class="arrow_right">
+        </div>
+      </router-link>
+
     </div>
     <aside class="offer_block">
       <div class="left_block_offer">
@@ -133,6 +137,9 @@ export default {
     ]),
     addToCart(data){
       this.ADD_TO_CART(data);
+    },
+    productClick(article){
+      this.$router.push(  { name: 'product', query: {  'product': article  }});
     }
   }
 }
@@ -1858,12 +1865,7 @@ button {
   height: 98px;
 }
 
-.products_sort {
-  display: flex;
-  flex-wrap: wrap;
-  padding-top: 7px;
-  justify-content: space-between;
-}
+
 
 .product_link {
   margin-top: 41px;

@@ -7,6 +7,7 @@
           :key="item.article"
           :mini_cart_item_data="item"
           @deleteFromMiniCart="deleteFromMiniCart(index)"
+          @productClick="productClick"
       >
       </v-mini-cart-item>
     </ul>
@@ -40,6 +41,9 @@ export default {
     ...mapActions([
       'DELETE_FROM_CART'
     ]),
+    productClick(article){
+      this.$router.push(  { name: 'product', query: {  'product': article  }});
+    },
     deleteFromMiniCart(index){
       this.DELETE_FROM_CART(index);
     }
@@ -1789,12 +1793,7 @@ button {
   height: 98px;
 }
 
-.products_sort {
-  display: flex;
-  flex-wrap: wrap;
-  padding-top: 7px;
-  justify-content: space-between;
-}
+
 
 .product_link {
   margin-top: 41px;
