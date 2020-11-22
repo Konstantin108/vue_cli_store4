@@ -25,51 +25,21 @@
           </li>
           <li class="left_menu_list list__top">
 
-            
+            <v-select-brand
+              :brands="brands"
+              @selectBrand="selectBrand"
+            >
+            </v-select-brand>
 
-
-            <details class="left__details">
-              <summary class="left__summary">BRAND</summary>
-              <ul class="drop__left_menu">
-                <li class="drop__left_list"><a href="#" class="drop__left_link">Accessories</a></li>
-                <li class="drop__left_list"><a href="#" class="drop__left_link">Bags</a></li>
-                <li class="drop__left_list"><a href="#" class="drop__left_link">Denim</a></li>
-                <li class="drop__left_list"><a href="#" class="drop__left_link">Hoodies &
-                  Sweatshirts</a></li>
-                <li class="drop__left_list"><a href="#" class="drop__left_link">Jackets & Coats</a></li>
-                <li class="drop__left_list"><a href="#" class="drop__left_link">Pants</a></li>
-                <li class="drop__left_list"><a href="#" class="drop__left_link">Polos</a></li>
-                <li class="drop__left_list"><a href="#" class="drop__left_link">Shirts</a></li>
-                <li class="drop__left_list"><a href="#" class="drop__left_link">Shoes</a></li>
-                <li class="drop__left_list"><a href="#" class="drop__left_link">Shorts</a></li>
-                <li class="drop__left_list"><a href="#" class="drop__left_link">Sweaters & Knits</a>
-                </li>
-                <li class="drop__left_list"><a href="#" class="drop__left_link">T-Shirts</a></li>
-                <li class="drop__left_list"><a href="#" class="drop__left_link">Tanks</a></li>
-              </ul>
-            </details>
           </li>
           <li class="left_menu_list list__top">
-            <details class="left__details">
-              <summary class="left__summary">dESIGNER</summary>
-              <ul class="drop__left_menu">
-                <li class="drop__left_list"><a href="#" class="drop__left_link">Accessories</a></li>
-                <li class="drop__left_list"><a href="#" class="drop__left_link">Bags</a></li>
-                <li class="drop__left_list"><a href="#" class="drop__left_link">Denim</a></li>
-                <li class="drop__left_list"><a href="#" class="drop__left_link">Hoodies &
-                  Sweatshirts</a></li>
-                <li class="drop__left_list"><a href="#" class="drop__left_link">Jackets & Coats</a></li>
-                <li class="drop__left_list"><a href="#" class="drop__left_link">Pants</a></li>
-                <li class="drop__left_list"><a href="#" class="drop__left_link">Polos</a></li>
-                <li class="drop__left_list"><a href="#" class="drop__left_link">Shirts</a></li>
-                <li class="drop__left_list"><a href="#" class="drop__left_link">Shoes</a></li>
-                <li class="drop__left_list"><a href="#" class="drop__left_link">Shorts</a></li>
-                <li class="drop__left_list"><a href="#" class="drop__left_link">Sweaters & Knits</a>
-                </li>
-                <li class="drop__left_list"><a href="#" class="drop__left_link">T-Shirts</a></li>
-                <li class="drop__left_list"><a href="#" class="drop__left_link">Tanks</a></li>
-              </ul>
-            </details>
+
+            <v-select-designer
+                :designers="designers"
+                @selectDesigner="selectDesigner"
+            >
+            </v-select-designer>
+
           </li>
         </ul>
       </div>
@@ -135,10 +105,29 @@
 <!--          </div>-->
           <div class="block3">
             <p class="title_size">price</p>
-            <input type="range" id="range" value="10" step="0.1">
+            <div class="range-slider">
+              <input
+                  type="range"
+                  class="range"
+                  step="10"
+                  min="0"
+                  max="1000"
+                  v-model.number="minPrice"
+                  @change="setRangeSlider"
+              >
+              <input
+                  type="range"
+                  class="range"
+                  step="10"
+                  min="0"
+                  max="1000"
+                  v-model.number="maxPrice"
+                  @change="setRangeSlider"
+              >
+            </div>
             <div class="dollars">
-              <p class="dollar">$52</p>
-              <p class="dollar">$4400</p>
+              <p class="dollar">min ${{ minPrice }}</p>
+              <p class="dollar">max ${{ maxPrice }}</p>
             </div>
           </div>
         </div>
@@ -176,7 +165,7 @@
             </div>
           </div>
         </div>
-        <div class="products_sort ">
+        <div class="products_sort">
 
           <v-all-products-item
               v-for="product in filteredProducts"
@@ -236,6 +225,8 @@
 <script>
 import vAllProductsItem from './v-all-products-item'
 import vSelect from './v-select'
+import vSelectBrand from './v-select-brand'
+import vSelectDesigner from './v-select-designer'
 import{mapActions} from 'vuex'     //<-- импортируем actions и getters из vuex
 import {mapGetters} from 'vuex'
 
@@ -243,7 +234,9 @@ export default {
   name: "v-all-products",
   components:{
     vAllProductsItem,
-    vSelect
+    vSelect,
+    vSelectBrand,
+    vSelectDesigner
   },
   data(){
     return{
@@ -273,8 +266,54 @@ export default {
           value: 6
         }
       ],
+      brands:[
+        {
+          name: 'All Brands',
+          value: 1
+        },
+        {
+          name: 'Chanel',
+          value: 2
+        },
+        {
+          name: 'Burberry',
+          value: 3
+        },
+        {
+          name: 'Prada',
+          value: 4
+        },
+      ],
+      designers:[
+        {
+          name: 'All Designers',
+          value: 1
+        },
+        {
+          name: 'binburhan',
+          value: 2
+        },
+        {
+          name: 'Le Corbusier',
+          value: 3
+        },
+        {
+          name: 'Isamu Noguchi',
+          value: 4
+        },
+        {
+          name: 'Philippe Starck',
+          value: 5
+        },
+        {
+          name: 'Joe Colombo',
+          value: 6
+        }
+      ],
       selected: '',
-      sortedProducts:[]
+      sortedProducts:[],
+      minPrice: 0,
+      maxPrice: 1000
     }
   },
   props:{},
@@ -286,6 +325,13 @@ export default {
     addToCart(data){
       this.ADD_TO_CART(data);
     },
+    rangeSelect(){
+      let vm = this;
+      this.sortedProducts = [...this.PRODUCTS]
+      this.sortedProducts = this.sortedProducts.filter(function (item){
+        return item.price >= vm.minPrice && item.price <= vm.maxPrice;
+      })
+    },
     optionSelect(category){
       this.sortedProducts = [];
       let vm = this;
@@ -294,15 +340,66 @@ export default {
           vm.sortedProducts.push(item)
         }
       })
-      this.selected = category.name;
+      this.selected = 'Category:' + ' ' + category.name;
+    },
+    selectBrand(brand){
+      this.sortedProducts = [];
+      let vm = this;
+      this.PRODUCTS.map(function (item) {
+        if(item.brand === brand.name){
+          vm.sortedProducts.push(item)
+        }
+      })
+      this.selected = 'Brand:' + ' ' + brand.name;
+    },
+    selectDesigner(designer){
+      this.sortedProducts = [];
+      let vm = this;
+      this.PRODUCTS.map(function (item) {
+        if(item.designer === designer.name){
+          vm.sortedProducts.push(item)
+        }
+      })
+      this.selected = 'Designer:' + ' ' + designer.name;
+    },
+    setRangeSlider(){
+      if(this.maxPrice < this.minPrice){
+        let tmp = this.maxPrice
+        this.maxPrice = this.minPrice;
+        this.minPrice = tmp;
+      }
+      this.rangeSelect();
+    },
+    sortProductsBySearchValue(value){
+      this.sortedProducts = [...this.PRODUCTS]
+      if(value){
+        this.sortedProducts = this.sortedProducts.filter(function (item){
+          return item.name.toLowerCase().includes(value.toLowerCase());
+        })
+      }else{
+        this.sortedProducts = this.PRODUCTS;
+      }
+    }
+  },
+  watch:{
+    SEARCH_VALUE() {
+      this.sortProductsBySearchValue(this.SEARCH_VALUE)
     }
   },
   mounted() {
     this.GET_PRODUCTS_FROM_API()
+      .then((response) => {
+        if(response.data){
+          console.log('data arrived')
+          this.rangeSelect();
+          this.sortProductsBySearchValue(this.SEARCH_VALUE);
+        }
+    })
   },
   computed:{
     ...mapGetters([
-      'PRODUCTS'     //<-- получаем компонент из getters
+      'PRODUCTS',     //<-- получаем компонент из getters
+      'SEARCH_VALUE'
     ]),
     filteredProducts(){
       if(this.sortedProducts.length){
@@ -808,6 +905,27 @@ a {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: stretch;
+}
+
+.range-slider{
+  width: 200px;
+  height: 20px;
+  margin: auto 16px;
+  text-align: center;
+  position: relative;
+}
+
+.range-slider svg, .range-slider input[type=range]{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+input[type=range]::-webkit-slider-thumb{
+  z-index: 2;
+  position: relative;
+  top: 2px;
+  margin-top: -7px;
 }
 
 .block__self1 {
@@ -2058,7 +2176,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   padding-top: 7px;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .product_link {
@@ -2589,12 +2707,12 @@ input[type=checkbox]:checked + .label8::before {
 .dollars {
   display: flex;
   justify-content: space-between;
-  width: 263px;
+  width: 300px;
   height: 26px;
   align-items: flex-end;
 }
 
-#range {
+.range {
   width: 263px;
 }
 

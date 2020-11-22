@@ -15,7 +15,7 @@
       "designer": "binburhan",
       "quantity": 1,
       "category": "t-shirt",
-      "brand": "PRADA"
+      "brand": "Prada"
     },
     {
       "id": "2",
@@ -32,7 +32,7 @@
       "designer": "Le Corbusier",
       "quantity":  1,
       "category": "jacket",
-      "brand":  "PRADA"
+      "brand":  "Prada"
     },
     {
       "id": "3",
@@ -49,7 +49,7 @@
       "designer": "binburhan",
       "quantity":  1,
       "category": "denim",
-      "brand":  "PRADA"
+      "brand":  "Prada"
     },
     {
       "id": "4",
@@ -66,7 +66,7 @@
       "designer": "Le Corbusier",
       "quantity":  1,
       "category": "shirt",
-      "brand":  "BURBERRY"
+      "brand":  "Burberry"
     },
     {
       "id": "5",
@@ -83,7 +83,7 @@
       "designer": "Isamu Noguchi",
       "quantity":  1,
       "category": "t-shirt",
-      "brand":  "BURBERRY"
+      "brand":  "Burberry"
     },
     {
       "id": "6",
@@ -100,7 +100,7 @@
       "designer": "Philippe Starck",
       "quantity":  1,
       "category": "jacket",
-      "brand":  "BURBERRY"
+      "brand":  "Burberry"
     },
     {
       "id": "7",
@@ -117,7 +117,7 @@
       "designer": "Isamu Noguchi",
       "quantity":  1,
       "category": "pants",
-      "brand":  "CHANEL"
+      "brand":  "Chanel"
     },
     {
       "id": "8",
@@ -134,7 +134,7 @@
       "designer": "Joe Colombo",
       "quantity":  1,
       "category": "pants",
-      "brand":  "CHANEL"
+      "brand":  "Chanel"
     }
   ]
 }

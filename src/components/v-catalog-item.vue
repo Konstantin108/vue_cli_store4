@@ -677,6 +677,7 @@ a {
 .cart__hover {
   display: none;
   transition: .4s;
+  cursor: pointer;
 }
 
 .cart__hover:hover {

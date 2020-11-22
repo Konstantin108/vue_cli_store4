@@ -601,7 +601,8 @@ a {
   width: 261px;
   min-height: 372px;
   transition: .4s;
-
+  margin-bottom: 40px;
+  margin-right: 22px;
 }
 
 .v-all-products-item:hover .photo___1 {

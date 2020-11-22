@@ -1,19 +1,18 @@
 <template>
 
-
-  <div class="v-select">
-    <div class="left__summary" @click="areOptionsVisible = !areOptionsVisible">CATEGORY</div>
+  <div class="v-select-brand">
+    <div class="left__summary" @click="areBrandsVisible = !areBrandsVisible">BRAND</div>
     <div
-        class="options"
-        v-if="areOptionsVisible"
+        class="brands"
+        v-if="areBrandsVisible"
     >
       <div
           class="drop__left_link"
-          v-for="option in options"
-          :key="option.value"
-          @click="selectOption(option)"
+          v-for="brand in brands"
+          :key="brand.value"
+          @click="selectBrand(brand)"
       >
-        {{ option.name }}
+        {{ brand.name }}
       </div>
     </div>
   </div>
@@ -21,14 +20,14 @@
 
 <script>
 export default {
-  name: "v-select",
+  name: "v-select-brand",
   data() {
     return {
-      areOptionsVisible: false
+      areBrandsVisible: false
     }
   },
   props:{
-    options:{
+    brands:{
       type: Array,
       default(){
         return []
@@ -36,9 +35,9 @@ export default {
     }
   },
   methods: {
-    selectOption(option){
-      this.$emit('select', option)
-      //this.areOptionsVisible = false
+    selectBrand(brand){
+      this.$emit('selectBrand', brand)
+      //this.areBrandsVisible = false
     }
   },
   computed: {},
