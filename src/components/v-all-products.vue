@@ -2174,7 +2174,7 @@ button {
 .checkboxes {
   height: 115px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .sortby_product {
