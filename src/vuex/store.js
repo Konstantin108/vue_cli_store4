@@ -47,7 +47,7 @@ let store = new Vuex.Store({
     },
     actions:{
         GET_PRODUCTS_FROM_API({commit}){     //<-- получает данные по API и отправляет в state используя мутацию
-            return axios(' http://localhost:3000/products', {
+            return axios('https://raw.githubusercontent.com/Konstantin108/vue_cli_store4/final/db.json', {
                 method: "GET"
             })
                 .then((products) => {
